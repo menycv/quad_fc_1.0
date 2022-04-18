@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.30\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\dron.X.production.sym \
   --cmf=dist/default/production\dron.X.production.cmf -z -Q16F1619 \
-  -oC:\Users\mplab\AppData\Local\Temp\s4sox2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\mplab\AppData\Local\Temp\sbp4x2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/dron.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=02044h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\mplab\AppData\Local\Temp\s4soxb.o \
+  C:\Users\mplab\AppData\Local\Temp\sbp4xb.o \
   dist/default/production\dron.X.production.o 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16F1619
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\mplab\AppData\Local\Temp\s4soxb.o
+C:\Users\mplab\AppData\Local\Temp\sbp4xb.o
                 end_init                             E5       E5        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        3        0       4
@@ -677,7 +677,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 25 in file "main.c"
+		line 41 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -707,7 +707,7 @@ Total ram usage:        8 bytes
 
  *************** function _read_sensor *****************
  Defined at:
-		line 144 in file "main.c"
+		line 161 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -737,7 +737,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_read *****************
  Defined at:
-		line 170 in file "main.c"
+		line 187 in file "main.c"
  Parameters:    Size  Location     Type
   address         1    wreg     unsigned char 
   subaddress      1    7[BANK0 ] unsigned char 
@@ -775,7 +775,7 @@ Total ram usage:       10 bytes
 
  *************** function _i2c_restart *****************
  Defined at:
-		line 221 in file "main.c"
+		line 238 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -805,7 +805,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_read_byte *****************
  Defined at:
-		line 193 in file "main.c"
+		line 210 in file "main.c"
  Parameters:    Size  Location     Type
   ack             1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -836,7 +836,7 @@ Total ram usage:        7 bytes
 
  *************** function _gyro_config *****************
  Defined at:
-		line 134 in file "main.c"
+		line 151 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -866,7 +866,7 @@ Total ram usage:        2 bytes
 
  *************** function _i2c_write *****************
  Defined at:
-		line 156 in file "main.c"
+		line 173 in file "main.c"
  Parameters:    Size  Location     Type
   address         1    wreg     unsigned char 
   subaddress      1    2[BANK0 ] unsigned char 
@@ -901,7 +901,7 @@ Total ram usage:        3 bytes
 
  *************** function _nack *****************
  Defined at:
-		line 207 in file "main.c"
+		line 224 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -932,7 +932,7 @@ Total ram usage:        2 bytes
 
  *************** function _i2c_stop *****************
  Defined at:
-		line 236 in file "main.c"
+		line 253 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -964,7 +964,7 @@ Total ram usage:        0 bytes
 
  *************** function _i2c_write_byte *****************
  Defined at:
-		line 227 in file "main.c"
+		line 244 in file "main.c"
  Parameters:    Size  Location     Type
   address         1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -995,7 +995,7 @@ Total ram usage:        1 bytes
 
  *************** function _i2c_start *****************
  Defined at:
-		line 215 in file "main.c"
+		line 232 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1026,7 +1026,7 @@ Total ram usage:        0 bytes
 
  *************** function _remote *****************
  Defined at:
-		line 242 in file "main.c"
+		line 259 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

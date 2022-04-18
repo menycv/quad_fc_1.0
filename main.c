@@ -1,10 +1,26 @@
 /*
  * File:   main.c
- * Author: mplab
- *
+ * Author: Manuel Calzadillas Valles
+ * Contact: menycalzadil@hotmail.com
+ * Phone: +52 6142898877
+ * 
  * Created on 26 de octubre de 2020, 20:31
  */
 #include "config.h"
+
+/*
+ * PINOUT DESCRIPTION PIC16F1619 20 pin DIP
+ * 1:  VDD          |-u-|   11: VSS  
+ * 2:  RA5          |   |   12: RA0 ICSPDAT ESC1
+ * 3:  RA4 ESC4     |   |   13: RA1 ICSPCLK ESC2
+ * 4:  RA3 MCLR     |   |   14: RA2 ESC3
+ * 5:  RC5 CH3 RC   |   |   15: RC0
+ * 6:  RC4 CH2 RC   |   |   16: RC1
+ * 7:  RC3 CH1 RC   |   |   17: RC2
+ * 8:  RC6 CH4 RC   |   |   18: RB4 GYRO SDA
+ * 9:  RC7          |   |   19: RB5
+ * 10: RB7          |___|   20: RB6 GYRO SCLK
+ */
 
 //Cuatro esc con capacidad hasta 2000 unsigned 16 bits = 65535
 unsigned esc1, esc2, esc3, esc4, ch1, ch2, ch3, ch4, TMR2H, count, TMR0H, tmrLoop;
@@ -19,8 +35,8 @@ struct previous{
     unsigned p4 :1;
 }p;
 
-//Variables flotantes
-float voltaje;
+//Variable para el voltaje
+long voltaje;
 
 void main(void) { 
     //Configuraciones iniciales
@@ -34,12 +50,13 @@ void main(void) {
     INTCONbits.PEIE = 1;
     PIE1bits.TMR2IE = 1;
     INTCONbits.TMR0IE = 1;
-    IOCCP = 0b01111000;    
+    IOCCP = 0b01111000;         // Habilita el interrupt on change para los pines
+                                // RC3, RC4, RC5 y RC6 para leer el control remoto
     //Configuracion de timers
     //TMR0
     OPTION_REGbits.TMR0CS = 0;  //Se escoge la velocidad de 8 MHZ para tmr0
-    OPTION_REGbits.PSA = 0; //Prescaler asignado a TMR0
-    OPTION_REGbits.PS = 2;  //Prescaler 1:8 1us
+    OPTION_REGbits.PSA = 0;     //Prescaler asignado a TMR0
+    OPTION_REGbits.PS = 2;      //Prescaler 1:8 1us
     //TMR1
     T1CONbits.TMR1CS = 0;
     T1CONbits.T1CKPS = 3;
@@ -68,16 +85,16 @@ void main(void) {
     ANSELB = 0;                     //Puerto B digital
     ANSELC = 0;                     //Puerto C digital
     TRISA = 0;                      // Todos los pines del puerto A se configuran como salidas
-    TRISB = 80;                     //Pin B4 y B6 como inputs
+    TRISB = 0b01010000;             //Pin B4 y B6 como inputs
     ODCONBbits.ODB4 = 1;            // Open drain en pin B4
     ODCONBbits.ODB6 = 1;            // Open drain en pin B6
-    TRISC = 0x78;                   //Pin C3-C6 inputs para control remotos 0b0111 1000
+    TRISC = 0b01111000;             //Pin C3-C6 inputs para control remotos 0b0111 1000
     //Inicialización de variables    
     start = 0;    
     //Ajustes iniciales de los sensores
-    gyro_config();
-    LATCbits.LATC7 = 0;
-    ch3 = 1000;
+    gyro_config();          // Se enciende el giroscopio y se configura
+    LATCbits.LATC7 = 0;     // Pin C7 se apaga, es el LED indicador
+    ch3 = 1000;             // Se inicializa el channel 3 para evitar errores
     while(1){
          // Se reinicia el contador del ciclo
         TMR0H = 0;
@@ -93,10 +110,13 @@ void main(void) {
         if(start == 1 && ch4 > 1900 && ch3 < 1050){
             start = 2;
         }
+        // Condición que se debe cumplir para encender el dron
         if(start == 2 && ch4 < 1600 && ch3 < 1050){
             start = 3;
             LATCbits.LATC7 = 1;
         }      
+        // Combinación para apagar el dron, palanca izquierda hasta la izquierda
+        // abajo y luego al centro
         if(start == 3 && ch4 < 1050 && ch3 < 1050){
             start = 0;
             LATCbits.LATC7 = 0;
@@ -104,26 +124,26 @@ void main(void) {
         // Se toman datos del sensor
         read_sensor();  
         // Para evitar que los motores piten mientras están apagados
-        // esc1 = esc2 = esc3 = esc4 = ch3;
+        esc1 = esc2 = esc3 = esc4 = ch3;
         tmrLoop = (TMR0H << 8) | TMR0;
         
         if(start < 3){                        
-            PORTA |= 15;
+            PORTA |= 0b00010111;    // Se activa el puerto A para evitar que piten los ESC
             while((((TMR0H << 8) | TMR0) - tmrLoop) < 1000 || TMR0 < 0xE8);           
-            PORTA &= 0b11110000;
+            PORTA &= 0b11101000;    // Se desactiva el puerto A
         }
         // Se arrancan motores
         else{
-            if(esc1 < 1200)esc1 = 1200;
-            if(esc2 < 1200)esc2 = 1200;
-            if(esc3 < 1200)esc3 = 1200;
-            if(esc4 < 1200)esc4 = 1200;
-            PORTA |= 15;
-            while((PORTA & 15) > 0){
+            if(esc1 < 1200)esc1 = 1200;     // To prevent propeller from stopping
+            if(esc2 < 1200)esc2 = 1200;     // if esc value is less than 1200
+            if(esc3 < 1200)esc3 = 1200;     // adjust it's value to 1200
+            if(esc4 < 1200)esc4 = 1200;     // 
+            PORTA |= 0b00010111;            // PORTA is set high in RA0, RA1, RA2 and RA4
+            while((PORTA & 0b00010111) > 0){
                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc1)PORTA &= 0b11111110;
                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc2)PORTA &= 0b11111101;
                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc3)PORTA &= 0b11111011;
-                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11110111;
+                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11101111;
             }
         }       
         while(TMR0H < 0x4E || TMR0 < 20);
@@ -132,13 +152,13 @@ void main(void) {
 }
 
 void gyro_config(){
-    i2c_write(GYRO, CTRL1, 0x0F); //Gyro powerup
-    i2c_write(GYRO, CTRL4, 0x90);  //Full Scale 500dps | Block data update
-    i2c_write(ACCE, CTRL1, 0x57); //ODR 100HZ   0b0101 0111 
-    i2c_write(ACCE, CTRL4, 0x90); //BDU 0b1001 0000
-    i2c_write(MAG, 0, 0x18); //0b0001 1000
-    i2c_write(MAG, 1, 0x80); //0b0001 1000 75 hz ODR
-    i2c_write(MAG, 2, 0); //0b0001 1000 75 hz ODR
+    i2c_write(GYRO, CTRL1, 0x0F);   //Gyro powerup
+    i2c_write(GYRO, CTRL4, 0x90);   //Full Scale 500dps | Block data update
+    i2c_write(ACCE, CTRL1, 0x57);   //ODR 100HZ   0b0101 0111 
+    i2c_write(ACCE, CTRL4, 0x90);   //BDU 0b1001 0000
+    i2c_write(MAG, 0, 0x18);        //0b0001 1000
+    i2c_write(MAG, 1, 0x80);        //0b0001 1000 75 hz ODR
+    i2c_write(MAG, 2, 0);           //0b0001 1000 75 hz ODR
 }
 
 void read_sensor(){

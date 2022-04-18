@@ -13,6 +13,8 @@
 
 
 
+
+
 # 1 "./config.h" 1
 # 39 "./config.h"
 #pragma config FOSC = INTOSC
@@ -16976,10 +16978,8 @@ void __attribute__((picinterrupt(("")))) remote(void);
 void calculate_pid();
 
 void read_sensor(void);
-# 7 "main.c" 2
-
-
-
+# 9 "main.c" 2
+# 26 "main.c"
 unsigned esc1, esc2, esc3, esc4, ch1, ch2, ch3, ch4, TMR2H, count, TMR0H, tmrLoop;
 
 signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
@@ -16993,7 +16993,7 @@ struct previous{
 }p;
 
 
-float voltaje;
+long voltaje;
 
 void main(void) {
 
@@ -17008,6 +17008,7 @@ void main(void) {
     PIE1bits.TMR2IE = 1;
     INTCONbits.TMR0IE = 1;
     IOCCP = 0b01111000;
+
 
 
     OPTION_REGbits.TMR0CS = 0;
@@ -17041,10 +17042,10 @@ void main(void) {
     ANSELB = 0;
     ANSELC = 0;
     TRISA = 0;
-    TRISB = 80;
+    TRISB = 0b01010000;
     ODCONBbits.ODB4 = 1;
     ODCONBbits.ODB6 = 1;
-    TRISC = 0x78;
+    TRISC = 0b01111000;
 
     start = 0;
 
@@ -17081,9 +17082,9 @@ void main(void) {
         tmrLoop = (TMR0H << 8) | TMR0;
 
         if(start < 3){
-            PORTA |= 15;
+            PORTA |= 0b00010111;
             while((((TMR0H << 8) | TMR0) - tmrLoop) < 1000 || TMR0 < 0xE8);
-            PORTA &= 0b11110000;
+            PORTA &= 0b11101000;
         }
 
         else{
@@ -17091,12 +17092,12 @@ void main(void) {
             if(esc2 < 1200)esc2 = 1200;
             if(esc3 < 1200)esc3 = 1200;
             if(esc4 < 1200)esc4 = 1200;
-            PORTA |= 15;
+            PORTA |= 0b00010111;
             while((PORTA & 15) > 0){
                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc1)PORTA &= 0b11111110;
                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc2)PORTA &= 0b11111101;
                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc3)PORTA &= 0b11111011;
-                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11110111;
+                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11101111;
             }
         }
         while(TMR0H < 0x4E || TMR0 < 20);
