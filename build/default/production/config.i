@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "config.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 23 "main.c"
+# 1 "config.c" 2
 # 1 "./config.h" 1
 # 39 "./config.h"
 #pragma config FOSC = INTOSC
@@ -16986,75 +16985,278 @@ void __attribute__((picinterrupt(("")))) remote(void);
 void calculate_pid();
 
 void read_sensor(void);
-# 23 "main.c" 2
+# 1 "config.c" 2
 
 
 
-unsigned esc1, esc2, esc3, esc4, count;
-unsigned char start;
+signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
+unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
 
-long voltaje;
-
-void main(void) {
-
-    pic_init();
-    gyro_config();
-
-    start = 0;
-    LATCbits.LATC7 = 0;
-    ch3 = 1000;
-    while(1){
-
-        TMR0H = 0;
-        TMR0 = 0;
-        TMR0H = 0;
-
-        if(!start){
-
-            esc1 = esc2 = esc3 = esc4 = 1000;
-            p.p1 = p.p2 = p.p3 = p.p4 = 0;
-            start = 1;
-        }
-        if(start == 1 && ch4 > 1900 && ch3 < 1050){
-            start = 2;
-        }
-
-        if(start == 2 && ch4 < 1600 && ch3 < 1050){
-            start = 3;
-            LATCbits.LATC7 = 1;
-        }
+struct previous p;
 
 
-        if(start == 3 && ch4 < 1050 && ch3 < 1050){
-            start = 0;
-            LATCbits.LATC7 = 0;
-        }
+void pic_init(void){
 
-        read_sensor();
 
-        esc1 = esc2 = esc3 = esc4 = ch3;
-        tmrLoop = (TMR0H << 8) | TMR0;
+    OSCCONbits.IRCF = 0b1110;
+    OSCCONbits.SCS = 0;
+    while(!OSCSTATbits.PLLR);
 
-        if(start < 3){
-            PORTA |= 0b00010111;
-            while((((TMR0H << 8) | TMR0) - tmrLoop) < 1000 || TMR0 < 0xE8);
-            PORTA &= 0b11101000;
-        }
+    INTCONbits.GIE = 1;
+    INTCONbits.IOCIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.TMR2IE = 1;
+    INTCONbits.TMR0IE = 1;
+    IOCCP = 0b01111000;
 
-        else{
-            if(esc1 < 1200)esc1 = 1200;
-            if(esc2 < 1200)esc2 = 1200;
-            if(esc3 < 1200)esc3 = 1200;
-            if(esc4 < 1200)esc4 = 1200;
-            PORTA |= 0b00010111;
-            while((PORTA & 0b00010111) > 0){
-                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc1)PORTA &= 0b11111110;
-                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc2)PORTA &= 0b11111101;
-                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc3)PORTA &= 0b11111011;
-                if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11101111;
+
+
+    OPTION_REGbits.TMR0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS = 2;
+
+    T1CONbits.TMR1CS = 0;
+    T1CONbits.T1CKPS = 3;
+
+    T3CONbits.TMR3CS = 0;
+    T3CONbits.T3CKPS = 3;
+
+    T5CONbits.TMR5CS = 0;
+    T5CONbits.T5CKPS = 3;
+
+    T2CLKCON = 0;
+    T2CONbits.CKPS = 3;
+    T2CONbits.OUTPS = 0;
+    T2HLTbits.PSYNC = 1;
+    T2RST = 15;
+
+    SSP1CONbits.SSPEN = 1;
+    SSP1CONbits.SSPM = 8;
+    SSP1ADD = 19;
+    RB4PPS = 17;
+    RB6PPS = 16;
+    SSPDATPPS = 12;
+    SSPCLKPPS = 14;
+
+    ANSELA = 0;
+    ANSELB = 0;
+    ANSELC = 0;
+    TRISA = 0;
+    TRISB = 0b01010000;
+    ODCONBbits.ODB4 = 1;
+    ODCONBbits.ODB6 = 1;
+    TRISC = 0b01111000;
+}
+void gyro_config(){
+    i2c_write(0xD2, 0x20, 0x0F);
+    i2c_write(0xD2, 0x23, 0x90);
+    i2c_write(0x32, 0x20, 0x57);
+    i2c_write(0x32, 0x23, 0x90);
+    i2c_write(0x3C, 0, 0x18);
+    i2c_write(0x3C, 1, 0x80);
+    i2c_write(0x3C, 2, 0);
+}
+
+void read_sensor(){
+    gyrox = i2c_read(0xD2, 0xA8);
+    gyroy = i2c_read(0xD2, 0xAA);
+    gyroz = i2c_read(0xD2, 0xAC);
+    accx = i2c_read(0x32, 0xA8);
+    accy = i2c_read(0x32, 0xAA);
+    accz = i2c_read(0x32, 0xAC);
+    magx = i2c_read(0x3C, 0x83);
+    magy = i2c_read(0x3C, 0x85);
+    magz = i2c_read(0x3C, 0x87);
+}
+
+void i2c_write(unsigned char address, unsigned char subaddress, unsigned char data){
+    i2c_start();
+    i2c_write_byte(address);
+    if(nack())
+        return;
+    i2c_write_byte(subaddress);
+    if(nack())
+        return;
+    i2c_write_byte(data);
+    if(nack())
+        return;
+    i2c_stop();
+}
+
+int i2c_read(unsigned char address, unsigned char subaddress){
+    int low, high;
+    i2c_start();
+    i2c_write_byte(address);
+    if(nack())
+        return 0;
+
+    i2c_write_byte(subaddress);
+    if(nack())
+        return 0;
+    i2c_restart();
+    i2c_write_byte(address | 1);
+    if(nack())
+        return 0;
+    low = i2c_read_byte(0);
+    high = i2c_read_byte(1);
+    i2c_stop();
+    if(address != 0x3C)
+        return((high << 8) | low);
+    else
+        return((low << 8) | high);
+}
+
+int i2c_read_byte(unsigned char ack){
+    int temp;
+    SSP1CON2bits.RCEN = 1;
+    while(RCEN);
+    temp = SSP1BUF;
+    PIR1bits.SSP1IF = 0;
+
+    SSP1CON2bits.ACKDT = ack;
+    SSP1CON2bits.ACKEN = 1;
+    while(SSP1CON2bits.ACKEN);
+    PIR1bits.SSP1IF = 0;
+    return temp;
+}
+
+int nack(){
+    if(SSP1CON2bits.ACKSTAT){
+        i2c_stop();
+        return 1;
+    }
+    return 0;
+}
+
+void i2c_start(){
+    SSP1CON2bits.SEN = 1;
+    while((SSP1CON2bits.SEN));
+    PIR1bits.SSP1IF = 0;
+}
+
+void i2c_restart(){
+    SSPCON2bits.RSEN = 1;
+    while(SSPCON2bits.RSEN);
+    PIR1bits.SSP1IF = 0;
+}
+
+void i2c_write_byte(unsigned char address){
+    SSP1CON2bits.RCEN = 0;
+    SSP1BUF = address;
+    while(SSP1STATbits.BF);
+    PIR1bits.SSP1IF = 0;
+    if(SSP1CON1bits.WCOL)
+        SSP1CON1bits.WCOL = 0;
+}
+
+void i2c_stop(){
+    SSP1CON2bits.PEN = 1;
+    while(SSP1CON2bits.PEN);
+    PIR1bits.SSP1IF = 0;
+}
+
+void __attribute__((picinterrupt(("")))) remote(){
+
+    if(INTCONbits.T0IF)
+    {
+        TMR0H++;
+        INTCONbits.T0IF = 0;
+    }
+
+    if(PIR1bits.TMR2IF){
+        TMR2H++;
+        PIR1bits.TMR2IF = 0;
+    }
+
+    if(INTCONbits.IOCIF){
+        if(IOCCFbits.IOCCF3)
+        {
+            if(p.p1)
+            {
+                T1CONbits.TMR1ON = 0;
+                if(TMR1 < 2100)
+                    ch1 = TMR1;
+                IOCCN &= 0b11110111;
+                IOCCP |= 0b00001000;
+                p.p1 = 0;
+            }
+            else
+            {
+                T1CONbits.TMR1ON = 1;
+                TMR1 = 0;
+                IOCCP &= 0b11110111;
+                IOCCN |= 0b00001000;
+                p.p1 = 1;
             }
         }
-        while(TMR0H < 0x4E || TMR0 < 20);
+
+        if(IOCCFbits.IOCCF4)
+        {
+            if(p.p2)
+            {
+                T3CONbits.TMR3ON = 0;
+                IOCCN &= 0b11101111;
+                IOCCP |= 0b00010000;
+                if(TMR3H < 9)
+                    ch2 = ((unsigned)TMR3H<<8) | (unsigned)TMR3L;
+                p.p2 = 0;
+            }
+            else
+            {
+                IOCCN |= 0b00010000;
+                IOCCP &= 0b11101111;
+                TMR3L = 0;
+                TMR3H = 0;
+                TMR3L = 0;
+                T3CONbits.TMR3ON = 1;
+                p.p2 = 1;
+            }
+        }
+
+        if(IOCCFbits.IOCCF5)
+        {
+            if(p.p3)
+            {
+                T5CONbits.TMR5ON = 0;
+                IOCCN &= 0b11011111;
+                IOCCP |= 0b00100000;
+                if(TMR5H < 9)
+                    ch3 = ((unsigned)TMR5H << 8) | (unsigned)TMR5L;
+                p.p3 = 0;
+            }
+            else
+            {
+                IOCCN |= 0b00100000;
+                IOCCP &= 0b11011111;
+                TMR5L = 0;
+                TMR5H = 0;
+                T5CONbits.TMR5ON = 1;
+                p.p3 = 1;
+            }
+        }
+
+        if(IOCCFbits.IOCCF6)
+        {
+            if(p.p4)
+            {
+                T2CONbits.ON = 0;
+                IOCCN &= 0b10111111;
+                IOCCP |= 0b01000000;
+                if(TMR2H < 9)
+                    ch4 = (TMR2H<<8) | TMR2;
+                p.p4 = 0;
+            }
+            else
+            {
+                IOCCN |= 0b01000000;
+                IOCCP &= 0b10111111;
+                TMR2 = 0;
+                TMR2H = 0;
+                T2CONbits.ON = 1;
+                p.p4 = 1;
+            }
+        }
+        IOCCF = 0;
+        INTCONbits.IOCIF = 0;
     }
-    __asm("sleep");
 }

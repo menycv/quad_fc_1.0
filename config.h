@@ -28,8 +28,8 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef XC_HEADER_TEMPLATE_H
-#define	XC_HEADER_TEMPLATE_H
+#ifndef CONFIG_H
+#define	CONFIG_H
 
 // PIC16F1619 Configuration Bit Settings
 
@@ -70,7 +70,20 @@
 #define MAG 0x3C
 #include <xc.h> // include processor files - each processor file is guarded.  
 
+//Variable externas
+//Un sensor con acc gyro y magnetometro 16 bits -32000 hasta 32000
+extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
+extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
 
+//Variables previas
+struct previous{
+    unsigned p1 :1;
+    unsigned p2 :1;
+    unsigned p3 :1;
+    unsigned p4 :1;
+};
+
+extern struct previous p;
 // FUNCIONES DE I2C PARA COMUNICACION CON SENSORES
 void gyro_config(void);
 void i2c_start(void);
@@ -82,6 +95,8 @@ void i2c_restart(void);
 int i2c_read_byte(unsigned char);
 int nack(void);
 
+// Inicializar PIC
+void pic_init(void);
 //INTERRUPCIONES
 void __interrupt() remote(void);
 
