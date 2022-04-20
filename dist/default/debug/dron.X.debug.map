@@ -3,11 +3,11 @@ Microchip MPLAB XC8 Compiler V2.30
 Linker command line:
 
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.30\pic\dat\en_msgs.txt -cn \
-  -h+dist/default/production\dron.X.production.sym \
-  --cmf=dist/default/production\dron.X.production.cmf -z -Q16F1619 \
-  -oC:\Users\mplab\AppData\Local\Temp\scl8x2 --defsym=__MPLAB_BUILD=1 \
-  -Mdist/default/production/dron.X.production.map -E1 -ver=XC8 Compiler \
-  --acfsm=1493 -ASTACK=02044h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
+  -h+dist/default/debug\dron.X.debug.sym \
+  --cmf=dist/default/debug\dron.X.debug.cmf -z -Q16F1619 \
+  -oC:\Users\mplab\AppData\Local\Temp\s8lkx2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/dron.X.debug.map -E1 -ver=XC8 Compiler --acfsm=1493 \
+  -ASTACK=02044h-023EFh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
   -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
   -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh \
@@ -31,8 +31,8 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\mplab\AppData\Local\Temp\scl8xb.o \
-  dist/default/production\dron.X.production.o 
+  C:\Users\mplab\AppData\Local\Temp\s8lkxb.o \
+  dist/default/debug\dron.X.debug.o 
 
 Object code version is 3.11
 
@@ -41,29 +41,29 @@ Machine type is 16F1619
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\mplab\AppData\Local\Temp\scl8xb.o
+C:\Users\mplab\AppData\Local\Temp\s8lkxb.o
                 end_init                             E8       E8        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        3        0       4
-dist/default/production\dron.X.production.o
+dist/default/debug\dron.X.debug.o
                 cinit                                EA       EA       12        8       0
                 intentry                              4        4       E4        8       0
                 config                             8007     8007        3        0       4
-                text11                              49C      49C        9        8       0
-                text10                              463      463       15        8       0
-                text9                               493      493        9        8       0
-                text8                               478      478       12        8       0
-                text7                               409      409       37        8       0
-                text6                               3B5      3B5       54        8       0
-                text5                               361      361       54        8       0
-                text4                               440      440       23        8       0
-                text3                               48A      48A        9        8       0
-                text2                               2EF      2EF       72        8       0
-                text1                               278      278       77        8       0
-                maintext                             FC       FC      17C        8       0
+                text11                              498      498        9        8       0
+                text10                              45F      45F       15        8       0
+                text9                               48F      48F        9        8       0
+                text8                               474      474       12        8       0
+                text7                               405      405       37        8       0
+                text6                               3B1      3B1       54        8       0
+                text5                               35D      35D       54        8       0
+                text4                               43C      43C       23        8       0
+                text3                               486      486        9        8       0
+                text2                               2EB      2EB       72        8       0
+                text1                               274      274       77        8       0
+                maintext                             FC       FC      178        8       0
                 cstackBANK0                          4A       4A       1A       20       1
                 cstackCOMMON                         76       76        6       70       1
-                clrtext                             4A5      4A5        6        8       0
+                clrtext                             4A1      4A1        6        8       0
                 bssBANK0                             20       20       2A       20       1
                 bssCOMMON                            70       70        6       70       1
 
@@ -75,19 +75,19 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                EA       EA       12         0
                 intentry                              4        4       E4         0
                 reset_vec                             0        0        2         0
-                text11                              49C      49C        9         0
-                text10                              463      463       15         0
-                text9                               493      493        9         0
-                text8                               478      478       12         0
-                text7                               409      409       37         0
-                text6                               3B5      3B5       54         0
-                text5                               361      361       54         0
-                text4                               440      440       23         0
-                text3                               48A      48A        9         0
-                text2                               2EF      2EF       72         0
-                text1                               278      278       77         0
-                maintext                             FC       FC      17C         0
-                clrtext                             4A5      4A5        6         0
+                text11                              498      498        9         0
+                text10                              45F      45F       15         0
+                text9                               48F      48F        9         0
+                text8                               474      474       12         0
+                text7                               405      405       37         0
+                text6                               3B1      3B1       54         0
+                text5                               35D      35D       54         0
+                text4                               43C      43C       23         0
+                text3                               486      486        9         0
+                text2                               2EB      2EB       72         0
+                text1                               274      274       77         0
+                maintext                             FC       FC      178         0
+                clrtext                             4A1      4A1        6         0
 
         CLASS   STRCODE        
 
@@ -250,7 +250,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0004A7  0004AB         8       0  CODE        2
+                intentry                       000004  0004A3  0004A7         8       0  CODE        2
                 bssBANK0                       000020  000044  000064        20       1  BANK0       1
                 bssCOMMON                      000070  00000C  00007C        70       1  COMMON      1
 
@@ -273,12 +273,12 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         004AB-01FFF             800
+                         004A7-01FFF             800
         COMMON           0007C-0007D               2           1
         CONST            00002-00003               2           2
-                         004AB-01FFF             100
+                         004A7-01FFF             100
         ENTRY            00002-00003               2           2
-                         004AB-01FFF             100
+                         004A7-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              00064-0006F               C           1
                          000A0-000EF              50
@@ -327,9 +327,9 @@ UNUSED ADDRESS RANGES
         SFR9             00480-0049F              20           1
         STACK            02044-023EF             3AC           1
         STRCODE          00002-00003               2           2
-                         004AB-01FFF            1B55
+                         004A7-01FFF            1B59
         STRING           00002-00003               2           2
-                         004AB-01FFF             100
+                         004A7-01FFF             100
 
                                   Symbol Table
 
@@ -467,7 +467,7 @@ __Hsfr6                  sfr6         00000
 __Hsfr7                  sfr7         00000
 __Hsfr8                  sfr8         00000
 __Hsfr9                  sfr9         00000
-__Hspace_0               (abs)        004AB
+__Hspace_0               (abs)        004A7
 __Hspace_1               (abs)        0007C
 __Hspace_2               (abs)        00000
 __Hspace_3               (abs)        00000
@@ -567,7 +567,7 @@ __Lspace_4               (abs)        00000
 __Lstack                 stack        00000
 __Lstrings               strings      00000
 __Ltext                  text         00000
-__S0                     (abs)        004AB
+__S0                     (abs)        004A7
 __S1                     (abs)        0007C
 __S2                     (abs)        00000
 ___int_sp                stack        00000
@@ -576,18 +576,18 @@ ___sp                    stack        00000
 ___stackhi               (abs)        023EF
 ___stacklo               (abs)        02044
 __end_of__initialization cinit        000F8
-__end_of_gyro_config     text6        00409
-__end_of_i2c_read        text2        00361
-__end_of_i2c_read_byte   text4        00463
-__end_of_i2c_restart     text3        00493
-__end_of_i2c_start       text11       004A5
-__end_of_i2c_stop        text9        0049C
-__end_of_i2c_write       text7        00440
-__end_of_i2c_write_byte  text10       00478
-__end_of_main            maintext     00278
-__end_of_nack            text8        0048A
-__end_of_pic_init        text5        003B5
-__end_of_read_sensor     text1        002EF
+__end_of_gyro_config     text6        00405
+__end_of_i2c_read        text2        0035D
+__end_of_i2c_read_byte   text4        0045F
+__end_of_i2c_restart     text3        0048F
+__end_of_i2c_start       text11       004A1
+__end_of_i2c_stop        text9        00498
+__end_of_i2c_write       text7        0043C
+__end_of_i2c_write_byte  text10       00474
+__end_of_main            maintext     00274
+__end_of_nack            text8        00486
+__end_of_pic_init        text5        003B1
+__end_of_read_sensor     text1        002EB
 __end_of_remote          intentry     000E8
 __initialization         cinit        000EA
 __pbssBANK0              bssBANK0     00020
@@ -596,17 +596,17 @@ __pcstackBANK0           cstackBANK0  0004A
 __pcstackCOMMON          cstackCOMMON 00076
 __pintentry              intentry     00004
 __pmaintext              maintext     000FC
-__ptext1                 text1        00278
-__ptext10                text10       00463
-__ptext11                text11       0049C
-__ptext2                 text2        002EF
-__ptext3                 text3        0048A
-__ptext4                 text4        00440
-__ptext5                 text5        00361
-__ptext6                 text6        003B5
-__ptext7                 text7        00409
-__ptext8                 text8        00478
-__ptext9                 text9        00493
+__ptext1                 text1        00274
+__ptext10                text10       0045F
+__ptext11                text11       00498
+__ptext2                 text2        002EB
+__ptext3                 text3        00486
+__ptext4                 text4        0043C
+__ptext5                 text5        0035D
+__ptext6                 text6        003B1
+__ptext7                 text7        00405
+__ptext8                 text8        00474
+__ptext9                 text9        0048F
 __size_of_gyro_config    (abs)        00000
 __size_of_i2c_read       (abs)        00000
 __size_of_i2c_read_byte  (abs)        00000
@@ -631,30 +631,30 @@ _esc1                    bssBANK0     00034
 _esc2                    bssBANK0     00032
 _esc3                    bssBANK0     00030
 _esc4                    bssBANK0     0002E
-_gyro_config             text6        003B5
+_gyro_config             text6        003B1
 _gyrox                   bssBANK0     00040
 _gyroy                   bssBANK0     0003E
 _gyroz                   bssBANK0     0003C
-_i2c_read                text2        002EF
-_i2c_read_byte           text4        00440
-_i2c_restart             text3        0048A
-_i2c_start               text11       0049C
-_i2c_stop                text9        00493
-_i2c_write               text7        00409
-_i2c_write_byte          text10       00463
+_i2c_read                text2        002EB
+_i2c_read_byte           text4        0043C
+_i2c_restart             text3        00486
+_i2c_start               text11       00498
+_i2c_stop                text9        0048F
+_i2c_write               text7        00405
+_i2c_write_byte          text10       0045F
 _magx                    bssBANK0     0003A
 _magy                    bssBANK0     00038
 _magz                    bssBANK0     00036
 _main                    maintext     000FC
-_nack                    text8        00478
+_nack                    text8        00474
 _p                       bssBANK0     00049
-_pic_init                text5        00361
-_read_sensor             text1        00278
+_pic_init                text5        0035D
+_read_sensor             text1        00274
 _remote                  intentry     00004
 _start                   bssBANK0     00048
 _tmrLoop                 bssBANK0     0002A
 btemp                    (abs)        0007E
-clear_ram0               clrtext      004A5
+clear_ram0               clrtext      004A1
 end_of_initialization    cinit        000F8
 i2c_read@address         cstackBANK0  0005A
 i2c_read@high            cstackBANK0  00058
@@ -1095,18 +1095,18 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 config.c
-		_gyro_config   		CODE           	03B5	0000	84
-		_pic_init      		CODE           	0361	0000	84
-		_i2c_start     		CODE           	049C	0000	9
-		_i2c_restart   		CODE           	048A	0000	9
+		_gyro_config   		CODE           	03B1	0000	84
+		_pic_init      		CODE           	035D	0000	84
+		_i2c_start     		CODE           	0498	0000	9
+		_i2c_restart   		CODE           	0486	0000	9
 		_remote        		CODE           	0004	0000	228
-		_i2c_write     		CODE           	0409	0000	55
-		_read_sensor   		CODE           	0278	0000	119
-		_i2c_stop      		CODE           	0493	0000	9
-		_i2c_read      		CODE           	02EF	0000	114
-		_nack          		CODE           	0478	0000	18
-		_i2c_write_byte		CODE           	0463	0000	21
-		_i2c_read_byte 		CODE           	0440	0000	35
+		_i2c_write     		CODE           	0405	0000	55
+		_read_sensor   		CODE           	0274	0000	119
+		_i2c_stop      		CODE           	048F	0000	9
+		_i2c_read      		CODE           	02EB	0000	114
+		_nack          		CODE           	0474	0000	18
+		_i2c_write_byte		CODE           	045F	0000	21
+		_i2c_read_byte 		CODE           	043C	0000	35
 
 config.c estimated size: 785
 
@@ -1116,7 +1116,7 @@ shared
 shared estimated size: 14
 
 main.c
-		_main          		CODE           	00FC	0000	380
+		_main          		CODE           	00FC	0000	376
 
-main.c estimated size: 380
+main.c estimated size: 376
 

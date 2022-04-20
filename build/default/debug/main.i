@@ -17007,7 +17007,6 @@ void main(void) {
     start = 3;
     LATCbits.LATC7 = 0;
     ch3 = 2000;
-    p.p1 = p.p2 = p.p3 = p.p4 = 0;
     while(1){
 
         TMR0H = 0;

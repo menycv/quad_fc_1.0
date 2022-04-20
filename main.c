@@ -21,9 +21,13 @@
 
 // Inclusión de librerías necesarias para el funcionamiento del programa
 #include "config.h"
+//Un sensor con acc gyro y magnetometro 16 bits -32000 hasta 32000
+signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
 
+//Variables previas
+struct previous p;
 //Cuatro esc con capacidad hasta 2000 unsigned 16 bits = 65535
-unsigned esc1, esc2, esc3, esc4, count;
+unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;;
 unsigned char start;
 //Variable para el voltaje
 long voltaje;
@@ -35,7 +39,7 @@ void main(void) {
     //Inicialización de variables    
     start = 0;   
     LATCbits.LATC7 = 0;     // Pin C7 se apaga, es el LED indicador
-    ch3 = 1000;             // Se inicializa el channel 3 para evitar errores
+    ch3 = 1000;             // Se inicializa el channel 3 para evitar errores    
     while(1){
          // Se reinicia el contador del ciclo
         TMR0H = 0;
@@ -64,10 +68,10 @@ void main(void) {
         }   
         // Se toman datos del sensor
         read_sensor();  
-        // Para evitar que los motores piten mientras están apagados
+        // Se establece el valor de los ESC igual que el valor del ch3 para calibrar ESC's
         esc1 = esc2 = esc3 = esc4 = ch3;
         tmrLoop = (TMR0H << 8) | TMR0;
-        
+        // Para evitar que los motores piten mientras están apagados
         if(start < 3){                        
             PORTA |= 0b00010111;    // Se activa el puerto A para evitar que piten los ESC
             while((((TMR0H << 8) | TMR0) - tmrLoop) < 1000 || TMR0 < 0xE8);           

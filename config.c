@@ -1,10 +1,6 @@
 #include "config.h"
 
-//Un sensor con acc gyro y magnetometro 16 bits -32000 hasta 32000
-signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
-unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
-//Variables previas
-struct previous p;
+
 
 // Inicialización de PIC
 void pic_init(void){
