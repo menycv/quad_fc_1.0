@@ -73,7 +73,7 @@
 //Variable externas
 //Un sensor con acc gyro y magnetometro 16 bits -32000 hasta 32000
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
-extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 
 //Variables previas
 struct previous{
@@ -101,38 +101,15 @@ void pic_init(void);
 void __interrupt() remote(void);
 
 // FUNCION PARA CALCULAR EL PID
-void calculate_pid();
+void calculate_pid(void);
 //FUNCION PARA LEER EL SENSOR
 void read_sensor(void);
-// TODO Insert appropriate #include <>
 
-// TODO Insert C++ class definitions if appropriate
+// FUNCTION FOR BALANCING DRONE
+void balance_drone(void);
 
-// TODO Insert declarations
-
-// Comment a function and leverage automatic documentation with slash star star
-/**
-    <p><b>Function prototype:</b></p>
-  
-    <p><b>Summary:</b></p>
-
-    <p><b>Description:</b></p>
-
-    <p><b>Precondition:</b></p>
-
-    <p><b>Parameters:</b></p>
-
-    <p><b>Returns:</b></p>
-
-    <p><b>Example:</b></p>
-    <code>
- 
-    </code>
-
-    <p><b>Remarks:</b></p>
- */
-// TODO Insert declarations or function prototypes (right here) to leverage 
-// live documentation
+// FUNCTION FOR COMPENSATING VOLTAGE DROPS
+void battery_compensation(void);  
 
 #ifdef	__cplusplus
 extern "C" {

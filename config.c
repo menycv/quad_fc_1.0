@@ -1,6 +1,5 @@
+// Functions implementation of config file
 #include "config.h"
-
-
 
 // Inicialización de PIC
 void pic_init(void){
@@ -38,8 +37,9 @@ void pic_init(void){
     T2HLTbits.PSYNC = 1;
     T2RST = 15;
     //Configurar pic como master en la comunicación i2c
-    SSP1CONbits.SSPEN = 1;
-    SSP1CONbits.SSPM = 8;
+    SSP1CONbits.SSPEN = 1;          // Synchronous Serial Port enabled
+    SSP1CONbits.SSPM = 8;           // Synchronous Serial Port Mode 0b1000
+                                    // I2C master mode, clk = Fosc/(4*SSP1ADD + 1)
     SSP1ADD = 19;                   //Velocidad de 400 KHZ  
     RB4PPS = 17;                    //Pin B4 SDA output
     RB6PPS = 16;                    //Pin B6 SCLK input
@@ -47,13 +47,20 @@ void pic_init(void){
     SSPCLKPPS = 14;                 //Pin B6 SCLK input
     //Configuracion de puertos
     ANSELA = 0;                     //Puerto A digital
-    ANSELB = 0;                     //Puerto B digital
+    ANSELB = 0b00100000;            //Puerto B digital excepto PIN B5 para lectura de batería
     ANSELC = 0;                     //Puerto C digital
     TRISA = 0;                      // Todos los pines del puerto A se configuran como salidas
-    TRISB = 0b01010000;             //Pin B4 y B6 como inputs
+    TRISB = 0b01110000;             // Pin B4, B5 and B6 as inputs
     ODCONBbits.ODB4 = 1;            // Open drain en pin B4
     ODCONBbits.ODB6 = 1;            // Open drain en pin B6
     TRISC = 0b01111000;             //Pin C3-C6 inputs para control remotos 0b0111 1000
+    
+    // Analog to digital converter configuration
+    ADCON0bits.ADON = 1;            // Analog to digital module enabled
+    ADCON0bits.CHS = 11;            // Analog Channel 11 Selected pin B5
+    ADCON1bits.ADPREF = 0;          // ADC positive voltage reference VDD selected
+    ADCON1bits.ADCS = 2;            // Clock selected Fosc / 32 for 8 MHZ Fosc
+    ADCON1bits.ADFM = 1;            // Right justified 3 bits of ADRESH and 8 bits of ADRESL
 }
 void gyro_config(){
     i2c_write(GYRO, CTRL1, 0x0F);   //Gyro powerup
@@ -163,6 +170,24 @@ void i2c_stop(){
     PIR1bits.SSP1IF = 0;
 }
 
+void calculate_pid(void){
+    // TODO
+}
+
+void balance_drone(){
+    // TODO
+}
+
+void battery_compensation(){
+    // Lectura del PIN B5 donde está conectada la batería
+    ADCON0bits.GO = 1;          // Habilitar lectura del convertidor analogo a digital
+    while(ADCON0bits.GO);       // Esperar a que termine la lectura y conversión
+    PIR1bits.ADIF = 0;          // Clearing interrupt bit for analog finish iterruption
+    // Assign value to variable voltage
+    voltage = (unsigned)((ADRESH << 8) | ADRESL);
+    //TODO battery compensation
+}
+// Interrupts for reading the remote control
 void __interrupt() remote(){ 
     // Overflow del tmr 0 cada 255 us e incremento de TMR0H
     if(INTCONbits.T0IF)

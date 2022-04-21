@@ -7,6 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "config.c" 2
+
 # 1 "./config.h" 1
 # 39 "./config.h"
 #pragma config FOSC = INTOSC
@@ -16954,7 +16955,7 @@ extern __bank0 __bit __timeout;
 
 
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
-extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 
 
 struct previous{
@@ -16982,12 +16983,16 @@ void pic_init(void);
 void __attribute__((picinterrupt(("")))) remote(void);
 
 
-void calculate_pid();
+void calculate_pid(void);
 
 void read_sensor(void);
-# 1 "config.c" 2
 
 
+void balance_drone(void);
+
+
+void battery_compensation(void);
+# 2 "config.c" 2
 
 
 
@@ -17028,6 +17033,7 @@ void pic_init(void){
 
     SSP1CONbits.SSPEN = 1;
     SSP1CONbits.SSPM = 8;
+
     SSP1ADD = 19;
     RB4PPS = 17;
     RB6PPS = 16;
@@ -17035,13 +17041,20 @@ void pic_init(void){
     SSPCLKPPS = 14;
 
     ANSELA = 0;
-    ANSELB = 0;
+    ANSELB = 0b00100000;
     ANSELC = 0;
     TRISA = 0;
-    TRISB = 0b01010000;
+    TRISB = 0b01110000;
     ODCONBbits.ODB4 = 1;
     ODCONBbits.ODB6 = 1;
     TRISC = 0b01111000;
+
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.CHS = 11;
+    ADCON1bits.ADPREF = 0;
+    ADCON1bits.ADCS = 2;
+    ADCON1bits.ADFM = 1;
 }
 void gyro_config(){
     i2c_write(0xD2, 0x20, 0x0F);
@@ -17149,6 +17162,23 @@ void i2c_stop(){
     SSP1CON2bits.PEN = 1;
     while(SSP1CON2bits.PEN);
     PIR1bits.SSP1IF = 0;
+}
+
+void calculate_pid(void){
+
+}
+
+void balance_drone(){
+
+}
+
+void battery_compensation(){
+
+    ADCON0bits.GO = 1;
+    while(ADCON0bits.GO);
+    PIR1bits.ADIF = 0;
+    voltage = (unsigned)((ADRESH << 8) | ADRESL);
+
 }
 
 void __attribute__((picinterrupt(("")))) remote(){

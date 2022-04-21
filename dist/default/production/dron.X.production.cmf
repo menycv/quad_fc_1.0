@@ -13,26 +13,29 @@
 %PSECTS
 $dist/default/production\dron.X.production.o
 cinit CODE 0 EA EA 12 2
-text1 CODE 0 278 278 77 2
-text2 CODE 0 2EF 2EF 72 2
-text3 CODE 0 48A 48A 9 2
-text4 CODE 0 440 440 23 2
-text5 CODE 0 361 361 54 2
-text6 CODE 0 3B5 3B5 54 2
-text7 CODE 0 409 409 37 2
-text8 CODE 0 478 478 12 2
-text9 CODE 0 493 493 9 2
-text10 CODE 0 463 463 15 2
-text11 CODE 0 49C 49C 9 2
-maintext CODE 0 FC FC 17C 2
+text1 CODE 0 2AE 2AE 77 2
+text2 CODE 0 325 325 72 2
+text3 CODE 0 4DE 4DE 9 2
+text4 CODE 0 483 483 23 2
+text5 CODE 0 397 397 61 2
+text6 CODE 0 3F8 3F8 54 2
+text7 CODE 0 44C 44C 37 2
+text8 CODE 0 4BB 4BB 12 2
+text9 CODE 0 4E7 4E7 9 2
+text10 CODE 0 4A6 4A6 15 2
+text11 CODE 0 4F0 4F0 9 2
+text12 CODE 0 4FF 4FF 1 2
+text13 CODE 0 4CD 4CD 11 2
+text14 CODE 0 500 500 1 2
+maintext CODE 0 FC FC 1B2 2
 cstackCOMMON COMMON 1 76 76 6 1
-cstackBANK0 BANK0 1 4A 4A 1A 1
+cstackBANK0 BANK0 1 48 48 1A 1
 intentry CODE 0 4 4 E4 2
-bssBANK0 BANK0 1 20 20 2A 1
-clrtext CODE 0 4A5 4A5 6 2
+bssBANK0 BANK0 1 20 20 28 1
+clrtext CODE 0 4F9 4F9 6 2
 bssCOMMON COMMON 1 70 70 6 1
 config CONFIG 4 8007 8007 3 2
-$C:\Users\mplab\AppData\Local\Temp\scl8xb.o
+$C:\Users\mplab\AppData\Local\Temp\sdsxb.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 E8 E8 2 2
 config CONFIG 4 8007 8007 3 2
@@ -42,7 +45,7 @@ config CONFIG 4 8007 8007 3 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 64-6F 1
+RAM 62-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -55,7 +58,7 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 64-6F 1
+BANK0 62-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -66,9 +69,9 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 4AB-1FFF 2
+CONST 501-1FFF 2
 ENTRY 2-3 2
-ENTRY 4AB-1FFF 2
+ENTRY 501-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -92,9 +95,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2044-23EF 1
+STACK 2042-23EF 1
 CODE 2-3 2
-CODE 4AB-1FFF 2
+CODE 501-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -111,9 +114,9 @@ BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 COMMON 7C-7D 1
 STRCODE 2-3 2
-STRCODE 4AB-1FFF 2
+STRCODE 501-1FFF 2
 STRING 2-3 2
-STRING 4AB-1FFF 2
+STRING 501-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -128,272 +131,293 @@ STRING 4AB-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\dron.X.production.o
-EA cinit CODE >2024:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-EA cinit CODE >2027:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-EA cinit CODE >2123:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-EB cinit CODE >2124:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-EC cinit CODE >2125:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-ED cinit CODE >2126:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-EE cinit CODE >2127:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-EF cinit CODE >2128:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F0 cinit CODE >2132:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F1 cinit CODE >2133:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F2 cinit CODE >2134:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F3 cinit CODE >2135:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F4 cinit CODE >2136:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F5 cinit CODE >2137:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F8 cinit CODE >2143:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F8 cinit CODE >2145:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-F9 cinit CODE >2146:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-FA cinit CODE >2147:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4 intentry CODE >166:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-6 intentry CODE >168:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-A intentry CODE >170:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-F intentry CODE >171:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-10 intentry CODE >174:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-15 intentry CODE >175:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-19 intentry CODE >176:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-1A intentry CODE >179:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-1E intentry CODE >180:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-23 intentry CODE >182:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-28 intentry CODE >184:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-29 intentry CODE >185:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-32 intentry CODE >186:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-36 intentry CODE >187:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3B intentry CODE >188:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3C intentry CODE >189:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3E intentry CODE >190:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3F intentry CODE >191:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3F intentry CODE >193:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-40 intentry CODE >194:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-42 intentry CODE >195:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-47 intentry CODE >196:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-48 intentry CODE >197:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-4A intentry CODE >201:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-4F intentry CODE >203:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-54 intentry CODE >205:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-56 intentry CODE >206:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-5B intentry CODE >207:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-5C intentry CODE >208:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-63 intentry CODE >209:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-6A intentry CODE >210:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-6C intentry CODE >211:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-6D intentry CODE >212:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-6D intentry CODE >214:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-6F intentry CODE >215:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-73 intentry CODE >216:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-75 intentry CODE >217:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-76 intentry CODE >218:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-77 intentry CODE >219:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-78 intentry CODE >220:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-7A intentry CODE >224:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-7F intentry CODE >226:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-84 intentry CODE >228:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-86 intentry CODE >229:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-8B intentry CODE >230:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-8C intentry CODE >231:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-93 intentry CODE >232:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-9A intentry CODE >233:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-9C intentry CODE >234:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-9D intentry CODE >235:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-9D intentry CODE >237:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-9F intentry CODE >238:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-A3 intentry CODE >239:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-A5 intentry CODE >240:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-A6 intentry CODE >241:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-A7 intentry CODE >242:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-A9 intentry CODE >246:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-AE intentry CODE >248:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-B3 intentry CODE >250:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-B4 intentry CODE >251:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-B9 intentry CODE >252:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-BA intentry CODE >253:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-C3 intentry CODE >254:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-D4 intentry CODE >255:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-D6 intentry CODE >256:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-D7 intentry CODE >257:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-D7 intentry CODE >259:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-D9 intentry CODE >260:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-DD intentry CODE >261:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-DF intentry CODE >262:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-E1 intentry CODE >263:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-E2 intentry CODE >264:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-E3 intentry CODE >267:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-E5 intentry CODE >268:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-E6 intentry CODE >270:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-49C text11 CODE >139:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-49C text11 CODE >140:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-49E text11 CODE >141:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-4A2 text11 CODE >142:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-4A4 text11 CODE >143:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-463 text10 CODE >151:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-465 text10 CODE >152:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-467 text10 CODE >153:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-46B text10 CODE >154:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-46F text10 CODE >155:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-471 text10 CODE >156:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-476 text10 CODE >157:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-477 text10 CODE >158:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-493 text9 CODE >160:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-493 text9 CODE >161:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-495 text9 CODE >162:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-499 text9 CODE >163:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-49B text9 CODE >164:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-478 text8 CODE >131:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-478 text8 CODE >132:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-47D text8 CODE >133:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-480 text8 CODE >134:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-486 text8 CODE >136:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-489 text8 CODE >137:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-409 text7 CODE >80:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-40B text7 CODE >81:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-40E text7 CODE >82:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-413 text7 CODE >83:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-41E text7 CODE >85:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-422 text7 CODE >86:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-42D text7 CODE >88:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-431 text7 CODE >89:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-43C text7 CODE >91:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-43F text7 CODE >92:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3B5 text6 CODE >58:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3B5 text6 CODE >59:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3C2 text6 CODE >60:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3CF text6 CODE >61:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3DC text6 CODE >62:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3E9 text6 CODE >63:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3F3 text6 CODE >64:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3FE text6 CODE >65:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-408 text6 CODE >66:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-361 text5 CODE >6:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-361 text5 CODE >9:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-366 text5 CODE >10:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-368 text5 CODE >11:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-36C text5 CODE >13:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-36D text5 CODE >14:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-36E text5 CODE >15:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-36F text5 CODE >16:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-370 text5 CODE >17:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-371 text5 CODE >18:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-374 text5 CODE >22:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-376 text5 CODE >23:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-377 text5 CODE >24:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-37B text5 CODE >26:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-37E text5 CODE >27:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-380 text5 CODE >29:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-383 text5 CODE >30:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-385 text5 CODE >32:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-387 text5 CODE >33:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-389 text5 CODE >35:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-38B text5 CODE >36:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-38F text5 CODE >37:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-391 text5 CODE >38:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-392 text5 CODE >39:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-394 text5 CODE >41:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-396 text5 CODE >42:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-39A text5 CODE >43:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-39C text5 CODE >44:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-39F text5 CODE >45:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3A1 text5 CODE >46:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3A4 text5 CODE >47:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3A6 text5 CODE >49:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3A8 text5 CODE >50:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3A9 text5 CODE >51:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3AA text5 CODE >52:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3AC text5 CODE >53:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3AE text5 CODE >54:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3B0 text5 CODE >55:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3B1 text5 CODE >56:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-3B4 text5 CODE >57:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-440 text4 CODE >117:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-442 text4 CODE >119:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-444 text4 CODE >120:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-448 text4 CODE >121:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-450 text4 CODE >122:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-451 text4 CODE >124:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-457 text4 CODE >125:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-458 text4 CODE >126:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-45C text4 CODE >127:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-45E text4 CODE >128:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-462 text4 CODE >129:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-48A text3 CODE >145:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-48A text3 CODE >146:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-48C text3 CODE >147:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-490 text3 CODE >148:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-492 text3 CODE >149:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2EF text2 CODE >94:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2F1 text2 CODE >96:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2F4 text2 CODE >97:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2F9 text2 CODE >98:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-303 text2 CODE >99:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-306 text2 CODE >101:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-30A text2 CODE >102:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-315 text2 CODE >104:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-318 text2 CODE >105:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-31E text2 CODE >106:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-329 text2 CODE >108:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-332 text2 CODE >109:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-33B text2 CODE >110:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-33E text2 CODE >111:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-345 text2 CODE >112:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-353 text2 CODE >114:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-360 text2 CODE >115:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-278 text1 CODE >68:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-278 text1 CODE >69:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-286 text1 CODE >70:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-293 text1 CODE >71:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2A0 text1 CODE >72:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2AD text1 CODE >73:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2BA text1 CODE >74:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2C7 text1 CODE >75:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2D4 text1 CODE >76:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2E1 text1 CODE >77:C:\Users\mplab\MPLABXProjects\dron.X\config.c
-2EE text1 CODE >78:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+EA cinit CODE >2036:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+EA cinit CODE >2039:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+EA cinit CODE >2135:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+EB cinit CODE >2136:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+EC cinit CODE >2137:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+ED cinit CODE >2138:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+EE cinit CODE >2139:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+EF cinit CODE >2140:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F0 cinit CODE >2144:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F1 cinit CODE >2145:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F2 cinit CODE >2146:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F3 cinit CODE >2147:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F4 cinit CODE >2148:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F5 cinit CODE >2149:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F8 cinit CODE >2155:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F8 cinit CODE >2157:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+F9 cinit CODE >2158:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+FA cinit CODE >2159:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4 intentry CODE >190:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+6 intentry CODE >192:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+A intentry CODE >194:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+F intentry CODE >195:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+10 intentry CODE >198:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+15 intentry CODE >199:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+19 intentry CODE >200:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+1A intentry CODE >203:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+1E intentry CODE >204:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+23 intentry CODE >206:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+28 intentry CODE >208:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+29 intentry CODE >209:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+32 intentry CODE >210:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+36 intentry CODE >211:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3B intentry CODE >212:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3C intentry CODE >213:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E intentry CODE >214:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F intentry CODE >215:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F intentry CODE >217:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+40 intentry CODE >218:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+42 intentry CODE >219:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+47 intentry CODE >220:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+48 intentry CODE >221:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4A intentry CODE >225:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4F intentry CODE >227:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+54 intentry CODE >229:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+56 intentry CODE >230:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+5B intentry CODE >231:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+5C intentry CODE >232:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+63 intentry CODE >233:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+6A intentry CODE >234:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+6C intentry CODE >235:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+6D intentry CODE >236:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+6D intentry CODE >238:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+6F intentry CODE >239:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+73 intentry CODE >240:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+75 intentry CODE >241:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+76 intentry CODE >242:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+77 intentry CODE >243:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+78 intentry CODE >244:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+7A intentry CODE >248:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+7F intentry CODE >250:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+84 intentry CODE >252:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+86 intentry CODE >253:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+8B intentry CODE >254:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+8C intentry CODE >255:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+93 intentry CODE >256:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+9A intentry CODE >257:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+9C intentry CODE >258:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+9D intentry CODE >259:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+9D intentry CODE >261:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+9F intentry CODE >262:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+A3 intentry CODE >263:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+A5 intentry CODE >264:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+A6 intentry CODE >265:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+A7 intentry CODE >266:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+A9 intentry CODE >270:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+AE intentry CODE >272:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+B3 intentry CODE >274:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+B4 intentry CODE >275:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+B9 intentry CODE >276:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+BA intentry CODE >277:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+C3 intentry CODE >278:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+D4 intentry CODE >279:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+D6 intentry CODE >280:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+D7 intentry CODE >281:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+D7 intentry CODE >283:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+D9 intentry CODE >284:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+DD intentry CODE >285:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+DF intentry CODE >286:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+E1 intentry CODE >287:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+E2 intentry CODE >288:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+E3 intentry CODE >291:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+E5 intentry CODE >292:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+E6 intentry CODE >294:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+500 text14 CODE >177:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+500 text14 CODE >179:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4CD text13 CODE >181:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4CD text13 CODE >183:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4CF text13 CODE >184:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4D3 text13 CODE >185:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4D5 text13 CODE >186:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4DD text13 CODE >188:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4FF text12 CODE >173:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4FF text12 CODE >175:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4F0 text11 CODE >146:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4F0 text11 CODE >147:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4F2 text11 CODE >148:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4F6 text11 CODE >149:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4F8 text11 CODE >150:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4A6 text10 CODE >158:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4A8 text10 CODE >159:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4AA text10 CODE >160:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4AE text10 CODE >161:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4B2 text10 CODE >162:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4B4 text10 CODE >163:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4B9 text10 CODE >164:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4BA text10 CODE >165:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4E7 text9 CODE >167:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4E7 text9 CODE >168:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4E9 text9 CODE >169:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4ED text9 CODE >170:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4EF text9 CODE >171:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4BB text8 CODE >138:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4BB text8 CODE >139:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4C0 text8 CODE >140:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4C3 text8 CODE >141:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4C9 text8 CODE >143:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4CC text8 CODE >144:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+44C text7 CODE >87:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+44E text7 CODE >88:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+451 text7 CODE >89:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+456 text7 CODE >90:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+461 text7 CODE >92:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+465 text7 CODE >93:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+470 text7 CODE >95:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+474 text7 CODE >96:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+47F text7 CODE >98:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+482 text7 CODE >99:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F8 text6 CODE >65:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F8 text6 CODE >66:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+405 text6 CODE >67:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+412 text6 CODE >68:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+41F text6 CODE >69:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+42C text6 CODE >70:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+436 text6 CODE >71:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+441 text6 CODE >72:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+44B text6 CODE >73:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+397 text5 CODE >5:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+397 text5 CODE >8:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+39C text5 CODE >9:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+39E text5 CODE >10:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3A2 text5 CODE >12:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3A3 text5 CODE >13:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3A4 text5 CODE >14:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3A5 text5 CODE >15:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3A6 text5 CODE >16:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3A7 text5 CODE >17:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3AA text5 CODE >21:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3AC text5 CODE >22:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3AD text5 CODE >23:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3B1 text5 CODE >25:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3B4 text5 CODE >26:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3B6 text5 CODE >28:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3B9 text5 CODE >29:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3BB text5 CODE >31:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3BD text5 CODE >32:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3BF text5 CODE >34:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3C1 text5 CODE >35:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3C5 text5 CODE >36:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3C7 text5 CODE >37:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3C8 text5 CODE >38:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3CA text5 CODE >40:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3CC text5 CODE >41:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3D0 text5 CODE >43:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3D2 text5 CODE >44:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3D5 text5 CODE >45:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3D7 text5 CODE >46:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3DA text5 CODE >47:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3DC text5 CODE >49:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3DE text5 CODE >50:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E0 text5 CODE >51:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E1 text5 CODE >52:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E3 text5 CODE >53:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E5 text5 CODE >54:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E7 text5 CODE >55:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3E8 text5 CODE >56:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3EB text5 CODE >59:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3EC text5 CODE >60:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F0 text5 CODE >61:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F2 text5 CODE >62:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F6 text5 CODE >63:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+3F7 text5 CODE >64:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+483 text4 CODE >124:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+485 text4 CODE >126:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+487 text4 CODE >127:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+48B text4 CODE >128:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+493 text4 CODE >129:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+494 text4 CODE >131:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+49A text4 CODE >132:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+49B text4 CODE >133:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+49F text4 CODE >134:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4A1 text4 CODE >135:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4A5 text4 CODE >136:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4DE text3 CODE >152:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4DE text3 CODE >153:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4E0 text3 CODE >154:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4E4 text3 CODE >155:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+4E6 text3 CODE >156:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+325 text2 CODE >101:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+327 text2 CODE >103:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+32A text2 CODE >104:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+32F text2 CODE >105:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+339 text2 CODE >106:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+33C text2 CODE >108:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+340 text2 CODE >109:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+34B text2 CODE >111:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+34E text2 CODE >112:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+354 text2 CODE >113:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+35F text2 CODE >115:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+368 text2 CODE >116:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+371 text2 CODE >117:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+374 text2 CODE >118:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+37B text2 CODE >119:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+389 text2 CODE >121:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+396 text2 CODE >122:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2AE text1 CODE >75:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2AE text1 CODE >76:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2BC text1 CODE >77:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2C9 text1 CODE >78:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2D6 text1 CODE >79:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2E3 text1 CODE >80:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2F0 text1 CODE >81:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+2FD text1 CODE >82:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+30A text1 CODE >83:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+317 text1 CODE >84:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+324 text1 CODE >85:C:\Users\mplab\MPLABXProjects\dron.X\config.c
+FC maintext CODE >33:C:\Users\mplab\MPLABXProjects\dron.X\main.c
 FC maintext CODE >35:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-FC maintext CODE >37:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-FF maintext CODE >38:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-102 maintext CODE >40:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-107 maintext CODE >41:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-109 maintext CODE >42:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-10E maintext CODE >43:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-112 maintext CODE >46:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-114 maintext CODE >47:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-115 maintext CODE >48:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-117 maintext CODE >50:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-11C maintext CODE >52:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-12C maintext CODE >53:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-130 maintext CODE >54:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-132 maintext CODE >56:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-149 maintext CODE >57:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-14D maintext CODE >60:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-165 maintext CODE >61:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-169 maintext CODE >62:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-16B maintext CODE >66:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-184 maintext CODE >67:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-185 maintext CODE >68:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-187 maintext CODE >71:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-18A maintext CODE >73:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-19B maintext CODE >74:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1AB maintext CODE >76:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1B1 maintext CODE >77:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1B5 maintext CODE >78:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1D6 maintext CODE >79:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1DA maintext CODE >80:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1DB maintext CODE >87:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1DF maintext CODE >88:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-1E0 maintext CODE >89:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-200 maintext CODE >90:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-220 maintext CODE >91:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-240 maintext CODE >92:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-260 maintext CODE >88:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-266 maintext CODE >95:C:\Users\mplab\MPLABXProjects\dron.X\main.c
-4A5 clrtext CODE >2112:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4A5 clrtext CODE >2113:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4A6 clrtext CODE >2114:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4A6 clrtext CODE >2115:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4A7 clrtext CODE >2116:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4A8 clrtext CODE >2117:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4A9 clrtext CODE >2118:C:\Users\mplab\AppData\Local\Temp\scl8x.s
-4AA clrtext CODE >2119:C:\Users\mplab\AppData\Local\Temp\scl8x.s
+FF maintext CODE >36:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+102 maintext CODE >38:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+104 maintext CODE >39:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+106 maintext CODE >40:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+10B maintext CODE >43:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+10D maintext CODE >44:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+10E maintext CODE >45:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+110 maintext CODE >47:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+115 maintext CODE >49:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+125 maintext CODE >50:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+129 maintext CODE >51:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+12B maintext CODE >53:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+142 maintext CODE >54:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+146 maintext CODE >57:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+15E maintext CODE >58:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+162 maintext CODE >59:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+164 maintext CODE >63:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+17D maintext CODE >64:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+17E maintext CODE >65:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+180 maintext CODE >69:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+183 maintext CODE >70:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+186 maintext CODE >71:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+189 maintext CODE >72:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+18C maintext CODE >75:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+19D maintext CODE >76:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1AD maintext CODE >78:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1B3 maintext CODE >79:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1B7 maintext CODE >80:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1D8 maintext CODE >81:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1DC maintext CODE >82:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1DD maintext CODE >85:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1EA maintext CODE >86:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+1F7 maintext CODE >87:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+204 maintext CODE >88:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+211 maintext CODE >89:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+215 maintext CODE >90:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+216 maintext CODE >91:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+236 maintext CODE >92:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+256 maintext CODE >93:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+276 maintext CODE >94:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+296 maintext CODE >90:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+29C maintext CODE >97:C:\Users\mplab\MPLABXProjects\dron.X\main.c
+4F9 clrtext CODE >2124:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4F9 clrtext CODE >2125:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4FA clrtext CODE >2126:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4FA clrtext CODE >2127:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4FB clrtext CODE >2128:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4FC clrtext CODE >2129:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4FD clrtext CODE >2130:C:\Users\mplab\AppData\Local\Temp\sdsx.s
+4FE clrtext CODE >2131:C:\Users\mplab\AppData\Local\Temp\sdsx.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -406,88 +430,93 @@ FF maintext CODE >38:C:\Users\mplab\MPLABXProjects\dron.X\main.c
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_p 49 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_p 47 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\dron.X.production.o
-__Hspace_0 4AB 0 ABS 0 - -
+__Hspace_0 501 0 ABS 0 - -
 __Hspace_1 7C 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10011 0 ABS 0 - -
-__end_of_i2c_write_byte 8F0 0 CODE 0 text10 dist/default/production\dron.X.production.o
+__end_of_i2c_write_byte 976 0 CODE 0 text10 dist/default/production\dron.X.production.o
 _SSP1STATbits 214 0 ABS 0 - dist/default/production\dron.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_pic_init 6C2 0 CODE 0 text5 dist/default/production\dron.X.production.o
-_i2c_read 5DE 0 CODE 0 text2 dist/default/production\dron.X.production.o
-_i2c_stop 926 0 CODE 0 text9 dist/default/production\dron.X.production.o
+_pic_init 72E 0 CODE 0 text5 dist/default/production\dron.X.production.o
+_i2c_read 64A 0 CODE 0 text2 dist/default/production\dron.X.production.o
+_i2c_stop 9CE 0 CODE 0 text9 dist/default/production\dron.X.production.o
 _T1CONbits 18 0 ABS 0 - dist/default/production\dron.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _RCEN 10B3 0 ABS 0 - dist/default/production\dron.X.production.o
 _TMR0 15 0 ABS 0 - dist/default/production\dron.X.production.o
 _TMR1 16 0 ABS 0 - dist/default/production\dron.X.production.o
 _TMR2 1A 0 ABS 0 - dist/default/production\dron.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-_accx 46 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_accy 44 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_accz 42 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_esc1 34 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_esc2 32 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_esc3 30 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_esc4 2E 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_magx 3A 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_magy 38 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_magz 36 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+_accx 44 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_accy 42 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_accz 40 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_esc1 32 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_esc2 30 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_esc3 2E 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_esc4 2C 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_magx 38 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_magy 36 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_magz 34 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
 _main 1F8 0 CODE 0 maintext dist/default/production\dron.X.production.o
-_nack 8F0 0 CODE 0 text8 dist/default/production\dron.X.production.o
+_nack 976 0 CODE 0 text8 dist/default/production\dron.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\dron.X.production.o
-_tmrLoop 2A 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-start 1D0 0 CODE 0 init C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-__end_of_pic_init 76A 0 CODE 0 text5 dist/default/production\dron.X.production.o
-__end_of_i2c_read 6C2 0 CODE 0 text2 dist/default/production\dron.X.production.o
-__end_of_i2c_stop 938 0 CODE 0 text9 dist/default/production\dron.X.production.o
+_tmrLoop 28 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+start 1D0 0 CODE 0 init C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+__end_of_pic_init 7F0 0 CODE 0 text5 dist/default/production\dron.X.production.o
+__end_of_i2c_read 72E 0 CODE 0 text2 dist/default/production\dron.X.production.o
+__end_of_i2c_stop 9E0 0 CODE 0 text9 dist/default/production\dron.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __size_of_nack 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\dron.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-i2c_read_byte@ack 4E 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\scl8xb.o
+i2c_read_byte@ack 4C 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\mplab\AppData\Local\Temp\sdsxb.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 99 0 ABS 0 - dist/default/production\dron.X.production.o
-?_i2c_read_byte 4A 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+?_i2c_read_byte 48 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\dron.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
+_ADRESH 9C 0 ABS 0 - dist/default/production\dron.X.production.o
+_ADRESL 9B 0 ABS 0 - dist/default/production\dron.X.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\dron.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\dron.X.production.o
 _ANSELC 18E 0 ABS 0 - dist/default/production\dron.X.production.o
 __size_of_read_sensor 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-__end_of_i2c_start 94A 0 CODE 0 text11 dist/default/production\dron.X.production.o
-__end_of_i2c_write 880 0 CODE 0 text7 dist/default/production\dron.X.production.o
+__end_of_i2c_start 9F2 0 CODE 0 text11 dist/default/production\dron.X.production.o
+__end_of_i2c_write 906 0 CODE 0 text7 dist/default/production\dron.X.production.o
 __size_of_i2c_start 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __size_of_i2c_write 0 0 ABS 0 - dist/default/production\dron.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-___stacklo 2044 0 ABS 0 - C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-__end_of_gyro_config 812 0 CODE 0 text6 dist/default/production\dron.X.production.o
-?_i2c_read 51 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-_i2c_start 938 0 CODE 0 text11 dist/default/production\dron.X.production.o
-_i2c_write 812 0 CODE 0 text7 dist/default/production\dron.X.production.o
+_calculate_pid 9FE 0 CODE 0 text12 dist/default/production\dron.X.production.o
+___stackhi 23EF 0 ABS 0 - C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+___stacklo 2042 0 ABS 0 - C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+__end_of_gyro_config 898 0 CODE 0 text6 dist/default/production\dron.X.production.o
+?_i2c_read 4F 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+_i2c_start 9E0 0 CODE 0 text11 dist/default/production\dron.X.production.o
+_i2c_write 898 0 CODE 0 text7 dist/default/production\dron.X.production.o
 start_initialization 1D4 0 CODE 0 cinit dist/default/production\dron.X.production.o
 _RB4PPS E9C 0 ABS 0 - dist/default/production\dron.X.production.o
 _RB6PPS E9E 0 ABS 0 - dist/default/production\dron.X.production.o
-__end_of_i2c_restart 926 0 CODE 0 text3 dist/default/production\dron.X.production.o
-clear_ram0 94A 0 CODE 0 clrtext dist/default/production\dron.X.production.o
-__pcstackBANK0 4A 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+__end_of_i2c_restart 9CE 0 CODE 0 text3 dist/default/production\dron.X.production.o
+__size_of_battery_compensation 0 0 ABS 0 - dist/default/production\dron.X.production.o
+clear_ram0 9F2 0 CODE 0 clrtext dist/default/production\dron.X.production.o
+__pcstackBANK0 48 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 _T2CLKCON 1E 0 ABS 0 - dist/default/production\dron.X.production.o
-i2c_write_byte@address 4A 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+i2c_write_byte@address 48 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 __end_of_remote 1D0 0 CODE 0 intentry dist/default/production\dron.X.production.o
-i2c_write@subaddress 4C 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\mplab\AppData\Local\Temp\scl8xb.o
+i2c_write@subaddress 4A 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+__end_of_battery_compensation 9BC 0 CODE 0 text13 dist/default/production\dron.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\mplab\AppData\Local\Temp\sdsxb.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -522,7 +551,7 @@ __Hsfr29 0 0 ABS 0 sfr29 -
 __Hsfr30 0 0 ABS 0 sfr30 -
 __Hsfr31 0 0 ABS 0 sfr31 -
 __Hstack 0 0 STACK 2 stack -
-_i2c_read_byte 880 0 CODE 0 text4 dist/default/production\dron.X.production.o
+_i2c_read_byte 906 0 CODE 0 text4 dist/default/production\dron.X.production.o
 __Hbank10 0 0 ABS 0 bank10 -
 __Hbank11 0 0 ABS 0 bank11 -
 __Hbank12 0 0 ABS 0 bank12 -
@@ -561,6 +590,7 @@ __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
 __Lcinit 1D4 0 CODE 0 cinit -
+_balance_drone A00 0 CODE 0 text14 dist/default/production\dron.X.production.o
 __size_of_i2c_write_byte 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -585,6 +615,7 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
+__size_of_calculate_pid 0 0 ABS 0 - dist/default/production\dron.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\dron.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -617,23 +648,27 @@ __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - dist/default/production\dron.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 4AB 0 ABS 0 - -
+__S0 501 0 ABS 0 - -
 __S1 7C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 _ch1 70 0 COMMON 1 bssCOMMON dist/default/production\dron.X.production.o
-_ch2 28 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_ch3 26 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_ch4 24 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_ch2 26 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_ch3 24 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_ch4 22 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+__end_of_calculate_pid A00 0 CODE 0 text12 dist/default/production\dron.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __size_of_gyro_config 0 0 ABS 0 - dist/default/production\dron.X.production.o
-_read_sensor 4F0 0 CODE 0 text1 dist/default/production\dron.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\mplab\AppData\Local\Temp\scl8xb.o
-i2c_write@address 4E 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+_read_sensor 55C 0 CODE 0 text1 dist/default/production\dron.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\mplab\AppData\Local\Temp\sdsxb.o
+i2c_write@address 4C 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 _SSP1CONbits 215 0 ABS 0 - dist/default/production\dron.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 90 0 ABS 0 - dist/default/production\dron.X.production.o
-__ptext10 8C6 0 CODE 0 text10 dist/default/production\dron.X.production.o
-__ptext11 938 0 CODE 0 text11 dist/default/production\dron.X.production.o
+__ptext10 94C 0 CODE 0 text10 dist/default/production\dron.X.production.o
+__ptext11 9E0 0 CODE 0 text11 dist/default/production\dron.X.production.o
+__ptext12 9FE 0 CODE 0 text12 dist/default/production\dron.X.production.o
+__ptext13 99A 0 CODE 0 text13 dist/default/production\dron.X.production.o
+__ptext14 A00 0 CODE 0 text14 dist/default/production\dron.X.production.o
 _IOCCFbits 399 0 ABS 0 - dist/default/production\dron.X.production.o
 __size_of_i2c_read_byte 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
@@ -661,13 +696,17 @@ __Lbank31 0 0 BANK31 1 bank31 -
 __pmaintext 1F8 0 CODE 0 maintext dist/default/production\dron.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __size_of_i2c_restart 0 0 ABS 0 - dist/default/production\dron.X.production.o
-i2c_read@address 5A 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-?_nack 4A 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+i2c_read@address 58 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+?_nack 48 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 _LATCbits 10E 0 ABS 0 - dist/default/production\dron.X.production.o
+__size_of_balance_drone 0 0 ABS 0 - dist/default/production\dron.X.production.o
 _remote 8 0 CODE 0 intentry dist/default/production\dron.X.production.o
-__end_of_i2c_read_byte 8C6 0 CODE 0 text4 dist/default/production\dron.X.production.o
+_voltage 20 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_ADCON0bits 9D 0 ABS 0 - dist/default/production\dron.X.production.o
+_ADCON1bits 9E 0 ABS 0 - dist/default/production\dron.X.production.o
+__end_of_i2c_read_byte 94C 0 CODE 0 text4 dist/default/production\dron.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -677,33 +716,35 @@ __pbssCOMMON 70 0 COMMON 1 bssCOMMON dist/default/production\dron.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits 10 0 ABS 0 - dist/default/production\dron.X.production.o
 __Lend_init 1D0 0 CODE 0 end_init -
+__end_of_balance_drone A02 0 CODE 0 text14 dist/default/production\dron.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization 1F0 0 CODE 0 cinit dist/default/production\dron.X.production.o
 _T5CONbits 49C 0 ABS 0 - dist/default/production\dron.X.production.o
 __Hintentry 1D0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
-i2c_write@data 4D 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-i2c_read@low 56 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+i2c_write@data 4B 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+i2c_read@low 54 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 __size_of_remote 0 0 ABS 0 - dist/default/production\dron.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCLKPPS E20 0 ABS 0 - dist/default/production\dron.X.production.o
 _SSPDATPPS E21 0 ABS 0 - dist/default/production\dron.X.production.o
 _SSPCON2bits 216 0 ABS 0 - dist/default/production\dron.X.production.o
-__ptext1 4F0 0 CODE 0 text1 dist/default/production\dron.X.production.o
-__ptext2 5DE 0 CODE 0 text2 dist/default/production\dron.X.production.o
-__ptext3 914 0 CODE 0 text3 dist/default/production\dron.X.production.o
-__ptext4 880 0 CODE 0 text4 dist/default/production\dron.X.production.o
-__ptext5 6C2 0 CODE 0 text5 dist/default/production\dron.X.production.o
-__ptext6 76A 0 CODE 0 text6 dist/default/production\dron.X.production.o
-__ptext7 812 0 CODE 0 text7 dist/default/production\dron.X.production.o
-__ptext8 8F0 0 CODE 0 text8 dist/default/production\dron.X.production.o
-__ptext9 926 0 CODE 0 text9 dist/default/production\dron.X.production.o
-i2c_read@subaddress 51 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-i2c_read@high 58 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+__ptext1 55C 0 CODE 0 text1 dist/default/production\dron.X.production.o
+__ptext2 64A 0 CODE 0 text2 dist/default/production\dron.X.production.o
+__ptext3 9BC 0 CODE 0 text3 dist/default/production\dron.X.production.o
+__ptext4 906 0 CODE 0 text4 dist/default/production\dron.X.production.o
+__ptext5 72E 0 CODE 0 text5 dist/default/production\dron.X.production.o
+__ptext6 7F0 0 CODE 0 text6 dist/default/production\dron.X.production.o
+__ptext7 898 0 CODE 0 text7 dist/default/production\dron.X.production.o
+__ptext8 976 0 CODE 0 text8 dist/default/production\dron.X.production.o
+__ptext9 9CE 0 CODE 0 text9 dist/default/production\dron.X.production.o
+i2c_read@subaddress 4F 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+i2c_read@high 56 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
+_battery_compensation 99A 0 CODE 0 text13 dist/default/production\dron.X.production.o
 __end_of__initialization 1F0 0 CODE 0 cinit dist/default/production\dron.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -711,13 +752,13 @@ _SSP1CON1bits 215 0 ABS 0 - dist/default/production\dron.X.production.o
 _SSP1CON2bits 216 0 ABS 0 - dist/default/production\dron.X.production.o
 __pcstackCOMMON 76 0 COMMON 1 cstackCOMMON dist/default/production\dron.X.production.o
 _T3CONbits 495 0 ABS 0 - dist/default/production\dron.X.production.o
-_gyro_config 76A 0 CODE 0 text6 dist/default/production\dron.X.production.o
+_gyro_config 7F0 0 CODE 0 text6 dist/default/production\dron.X.production.o
 _SSP1ADD 212 0 ABS 0 - dist/default/production\dron.X.production.o
 _SSP1BUF 211 0 ABS 0 - dist/default/production\dron.X.production.o
-_i2c_write_byte 8C6 0 CODE 0 text10 dist/default/production\dron.X.production.o
+_i2c_write_byte 94C 0 CODE 0 text10 dist/default/production\dron.X.production.o
 __Hend_init 1D4 0 CODE 0 end_init -
-__end_of_main 4F0 0 CODE 0 maintext dist/default/production\dron.X.production.o
-__end_of_nack 914 0 CODE 0 text8 dist/default/production\dron.X.production.o
+__end_of_main 55C 0 CODE 0 maintext dist/default/production\dron.X.production.o
+__end_of_nack 99A 0 CODE 0 text8 dist/default/production\dron.X.production.o
 __size_of_pic_init 0 0 ABS 0 - dist/default/production\dron.X.production.o
 _ODCONBbits 28D 0 ABS 0 - dist/default/production\dron.X.production.o
 __size_of_i2c_read 0 0 ABS 0 - dist/default/production\dron.X.production.o
@@ -727,7 +768,7 @@ _IOCCN 398 0 ABS 0 - dist/default/production\dron.X.production.o
 _IOCCP 397 0 ABS 0 - dist/default/production\dron.X.production.o
 _PORTA C 0 ABS 0 - dist/default/production\dron.X.production.o
 _T2RST 1F 0 ABS 0 - dist/default/production\dron.X.production.o
-_TMR0H 2C 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_TMR0H 2A 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
 _TMR2H 72 0 COMMON 1 bssCOMMON dist/default/production\dron.X.production.o
 _TMR3H 494 0 ABS 0 - dist/default/production\dron.X.production.o
 _TMR3L 493 0 ABS 0 - dist/default/production\dron.X.production.o
@@ -738,16 +779,16 @@ _TRISB 8D 0 ABS 0 - dist/default/production\dron.X.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\dron.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_gyrox 40 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_gyroy 3E 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_gyroz 3C 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
-_start 48 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_gyrox 3E 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_gyroy 3C 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_gyroz 3A 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
+_start 46 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\dron.X.production.o
 _OSCSTATbits 9A 0 ABS 0 - dist/default/production\dron.X.production.o
-i2c_read_byte@temp 4F 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
-_i2c_restart 914 0 CODE 0 text3 dist/default/production\dron.X.production.o
+i2c_read_byte@temp 4D 0 BANK0 1 cstackBANK0 dist/default/production\dron.X.production.o
+_i2c_restart 9BC 0 CODE 0 text3 dist/default/production\dron.X.production.o
 __initialization 1D4 0 CODE 0 cinit dist/default/production\dron.X.production.o
-__end_of_read_sensor 5DE 0 CODE 0 text1 dist/default/production\dron.X.production.o
+__end_of_read_sensor 64A 0 CODE 0 text1 dist/default/production\dron.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\dron.X.production.o
 _T2CONbits 1C 0 ABS 0 - dist/default/production\dron.X.production.o
 # %SPLITSTAB Section
@@ -775,9 +816,9 @@ _T2CONbits 1C 0 ABS 0 - dist/default/production\dron.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-intentry 0 4 8 4A7 2
+intentry 0 4 8 4FD 2
 reset_vec 0 0 0 2 2
-bssBANK0 1 20 20 44 1
+bssBANK0 1 20 20 42 1
 bssCOMMON 1 70 70 C 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

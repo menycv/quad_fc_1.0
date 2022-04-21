@@ -21,9 +21,22 @@ Hardware
 - Drone frame
 - LIPO charger SKYRC IMAX B6 mini
 - 4 10" propellers
+- PCB
+- 2 Resistors 5 kOhm
+- Jumper cables
+- Pickit3 or another ICT Debugger
+- Logic analyzer or oscilloscope for debugging
+- 
 
 Software
 - MPLAB
+- Software functions
+	- Inputs: Giroscope, batery, remote control
+	- Outputs: Led, Time for ESC's
+	- read_sensor()
+	- balance_dron()
+	- calculate_pid()
+	- battery_compensation()
 
 Docs
 - Pic16f1619 datasheet

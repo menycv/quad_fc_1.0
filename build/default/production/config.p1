@@ -225,6 +225,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1703
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 1703: extern volatile unsigned char TRISC __attribute__((address(0x08E)));
 [v _TRISC `Vuc ~T0 @X0 0 e@142 ]
+"2437
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2437:     struct {
+[s S127 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S127 . ADON GO_nDONE CHS ]
+"2442
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2442:     struct {
+[s S128 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S128 . . ADGO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"2451
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2451:     struct {
+[s S129 :1 `uc 1 :1 `uc 1 ]
+[n S129 . . GO ]
+"2436
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2436: typedef union {
+[u S126 `S127 1 `S128 1 `S129 1 ]
+[n S126 . . . . ]
+"2456
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2456: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x09D)));
+[v _ADCON0bits `VS126 ~T0 @X0 0 e@157 ]
+"2517
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2517:     struct {
+[s S131 :2 `uc 1 :2 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S131 . ADPREF . ADCS ADFM ]
+"2523
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2523:     struct {
+[s S132 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S132 . ADPREF0 ADPREF1 . ADCS0 ADCS1 ADCS2 ]
+"2516
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2516: typedef union {
+[u S130 `S131 1 `S132 1 ]
+[n S130 . . . ]
+"2532
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2532: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09E)));
+[v _ADCON1bits `VS130 ~T0 @X0 0 e@158 ]
 "92 ./config.h
 [; ;./config.h: 92: void i2c_write(unsigned char, unsigned char, unsigned char);
 [v _i2c_write `(v ~T0 @X0 0 ef3`uc`uc`uc ]
@@ -327,10 +361,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5609
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 5609: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0x215)));
 [v _SSP1CON1bits `VS280 ~T0 @X0 0 e@533 ]
+"76 ./config.h
+[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
+[v _voltage `ui ~T0 @X0 0 e ]
+"2411 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2411: extern volatile unsigned char ADRESH __attribute__((address(0x09C)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
+"2391
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2391: extern volatile unsigned char ADRESL __attribute__((address(0x09B)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
 [t ~ __interrupt . k ]
 [t T2 __interrupt ]
 "76 ./config.h
-[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 [v _TMR0H `ui ~T0 @X0 0 e ]
 [v _TMR2H `ui ~T0 @X0 0 e ]
 "7526 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
@@ -355,7 +398,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 888: extern volatile unsigned short TMR1 __attribute__((address(0x016)));
 [v _TMR1 `Vus ~T0 @X0 0 e@22 ]
 "76 ./config.h
-[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 [v _ch1 `ui ~T0 @X0 0 e ]
 "7458 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 7458: extern volatile unsigned char IOCCN __attribute__((address(0x398)));
@@ -364,7 +407,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 8713: extern volatile unsigned char TMR3H __attribute__((address(0x494)));
 [v _TMR3H `Vuc ~T0 @X0 0 e@1172 ]
 "76 ./config.h
-[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 [v _ch2 `ui ~T0 @X0 0 e ]
 "8693 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 8693: extern volatile unsigned char TMR3L __attribute__((address(0x493)));
@@ -373,13 +416,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 8890: extern volatile unsigned char TMR5H __attribute__((address(0x49B)));
 [v _TMR5H `Vuc ~T0 @X0 0 e@1179 ]
 "76 ./config.h
-[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 [v _ch3 `ui ~T0 @X0 0 e ]
 "8870 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 8870: extern volatile unsigned char TMR5L __attribute__((address(0x49A)));
 [v _TMR5L `Vuc ~T0 @X0 0 e@1178 ]
 "76 ./config.h
-[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;
+[; ;./config.h: 76: extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 [v _ch4 `ui ~T0 @X0 0 e ]
 "1077 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 1077: extern volatile unsigned char TMR2 __attribute__((address(0x01A)));
@@ -1753,90 +1796,90 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27883
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 27883: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"6 config.c
-[; ;config.c: 6: void pic_init(void){
+"5 config.c
+[; ;config.c: 5: void pic_init(void){
 [v _pic_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _pic_init ]
 [f ]
-"9
-[; ;config.c: 9:     OSCCONbits.IRCF = 0b1110;
+"8
+[; ;config.c: 8:     OSCCONbits.IRCF = 0b1110;
 [e = . . _OSCCONbits 0 2 -> -> 14 `i `uc ]
-"10
-[; ;config.c: 10:     OSCCONbits.SCS = 0;
+"9
+[; ;config.c: 9:     OSCCONbits.SCS = 0;
 [e = . . _OSCCONbits 0 0 -> -> 0 `i `uc ]
-"11
-[; ;config.c: 11:     while(!OSCSTATbits.PLLR);
+"10
+[; ;config.c: 10:     while(!OSCSTATbits.PLLR);
 [e $U 1218  ]
 [e :U 1219 ]
 [e :U 1218 ]
 [e $ ! != -> . . _OSCSTATbits 0 6 `i -> 0 `i 1219  ]
 [e :U 1220 ]
-"13
-[; ;config.c: 13:     INTCONbits.GIE = 1;
+"12
+[; ;config.c: 12:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"14
-[; ;config.c: 14:     INTCONbits.IOCIE = 1;
+"13
+[; ;config.c: 13:     INTCONbits.IOCIE = 1;
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"15
-[; ;config.c: 15:     INTCONbits.PEIE = 1;
+"14
+[; ;config.c: 14:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"16
-[; ;config.c: 16:     PIE1bits.TMR2IE = 1;
+"15
+[; ;config.c: 15:     PIE1bits.TMR2IE = 1;
 [e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-"17
-[; ;config.c: 17:     INTCONbits.TMR0IE = 1;
+"16
+[; ;config.c: 16:     INTCONbits.TMR0IE = 1;
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"18
-[; ;config.c: 18:     IOCCP = 0b01111000;
+"17
+[; ;config.c: 17:     IOCCP = 0b01111000;
 [e = _IOCCP -> -> 120 `i `uc ]
-"22
-[; ;config.c: 22:     OPTION_REGbits.TMR0CS = 0;
+"21
+[; ;config.c: 21:     OPTION_REGbits.TMR0CS = 0;
 [e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-"23
-[; ;config.c: 23:     OPTION_REGbits.PSA = 0;
+"22
+[; ;config.c: 22:     OPTION_REGbits.PSA = 0;
 [e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-"24
-[; ;config.c: 24:     OPTION_REGbits.PS = 2;
+"23
+[; ;config.c: 23:     OPTION_REGbits.PS = 2;
 [e = . . _OPTION_REGbits 0 0 -> -> 2 `i `uc ]
-"26
-[; ;config.c: 26:     T1CONbits.TMR1CS = 0;
+"25
+[; ;config.c: 25:     T1CONbits.TMR1CS = 0;
 [e = . . _T1CONbits 0 5 -> -> 0 `i `uc ]
-"27
-[; ;config.c: 27:     T1CONbits.T1CKPS = 3;
+"26
+[; ;config.c: 26:     T1CONbits.T1CKPS = 3;
 [e = . . _T1CONbits 0 4 -> -> 3 `i `uc ]
-"29
-[; ;config.c: 29:     T3CONbits.TMR3CS = 0;
+"28
+[; ;config.c: 28:     T3CONbits.TMR3CS = 0;
 [e = . . _T3CONbits 0 5 -> -> 0 `i `uc ]
-"30
-[; ;config.c: 30:     T3CONbits.T3CKPS = 3;
+"29
+[; ;config.c: 29:     T3CONbits.T3CKPS = 3;
 [e = . . _T3CONbits 0 4 -> -> 3 `i `uc ]
-"32
-[; ;config.c: 32:     T5CONbits.TMR5CS = 0;
+"31
+[; ;config.c: 31:     T5CONbits.TMR5CS = 0;
 [e = . . _T5CONbits 0 5 -> -> 0 `i `uc ]
-"33
-[; ;config.c: 33:     T5CONbits.T5CKPS = 3;
+"32
+[; ;config.c: 32:     T5CONbits.T5CKPS = 3;
 [e = . . _T5CONbits 0 4 -> -> 3 `i `uc ]
-"35
-[; ;config.c: 35:     T2CLKCON = 0;
+"34
+[; ;config.c: 34:     T2CLKCON = 0;
 [e = _T2CLKCON -> -> 0 `i `uc ]
-"36
-[; ;config.c: 36:     T2CONbits.CKPS = 3;
+"35
+[; ;config.c: 35:     T2CONbits.CKPS = 3;
 [e = . . _T2CONbits 0 1 -> -> 3 `i `uc ]
-"37
-[; ;config.c: 37:     T2CONbits.OUTPS = 0;
+"36
+[; ;config.c: 36:     T2CONbits.OUTPS = 0;
 [e = . . _T2CONbits 0 0 -> -> 0 `i `uc ]
-"38
-[; ;config.c: 38:     T2HLTbits.PSYNC = 1;
+"37
+[; ;config.c: 37:     T2HLTbits.PSYNC = 1;
 [e = . . _T2HLTbits 0 3 -> -> 1 `i `uc ]
-"39
-[; ;config.c: 39:     T2RST = 15;
+"38
+[; ;config.c: 38:     T2RST = 15;
 [e = _T2RST -> -> 15 `i `uc ]
-"41
-[; ;config.c: 41:     SSP1CONbits.SSPEN = 1;
+"40
+[; ;config.c: 40:     SSP1CONbits.SSPEN = 1;
 [e = . . _SSP1CONbits 0 2 -> -> 1 `i `uc ]
-"42
-[; ;config.c: 42:     SSP1CONbits.SSPM = 8;
+"41
+[; ;config.c: 41:     SSP1CONbits.SSPM = 8;
 [e = . . _SSP1CONbits 0 0 -> -> 8 `i `uc ]
 "43
 [; ;config.c: 43:     SSP1ADD = 19;
@@ -1857,8 +1900,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;config.c: 49:     ANSELA = 0;
 [e = _ANSELA -> -> 0 `i `uc ]
 "50
-[; ;config.c: 50:     ANSELB = 0;
-[e = _ANSELB -> -> 0 `i `uc ]
+[; ;config.c: 50:     ANSELB = 0b00100000;
+[e = _ANSELB -> -> 32 `i `uc ]
 "51
 [; ;config.c: 51:     ANSELC = 0;
 [e = _ANSELC -> -> 0 `i `uc ]
@@ -1866,8 +1909,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;config.c: 52:     TRISA = 0;
 [e = _TRISA -> -> 0 `i `uc ]
 "53
-[; ;config.c: 53:     TRISB = 0b01010000;
-[e = _TRISB -> -> 80 `i `uc ]
+[; ;config.c: 53:     TRISB = 0b01110000;
+[e = _TRISB -> -> 112 `i `uc ]
 "54
 [; ;config.c: 54:     ODCONBbits.ODB4 = 1;
 [e = . . _ODCONBbits 0 1 -> -> 1 `i `uc ]
@@ -1877,80 +1920,95 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;config.c: 56:     TRISC = 0b01111000;
 [e = _TRISC -> -> 120 `i `uc ]
-"57
-[; ;config.c: 57: }
+"59
+[; ;config.c: 59:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"60
+[; ;config.c: 60:     ADCON0bits.CHS = 11;
+[e = . . _ADCON0bits 0 2 -> -> 11 `i `uc ]
+"61
+[; ;config.c: 61:     ADCON1bits.ADPREF = 0;
+[e = . . _ADCON1bits 0 0 -> -> 0 `i `uc ]
+"62
+[; ;config.c: 62:     ADCON1bits.ADCS = 2;
+[e = . . _ADCON1bits 0 2 -> -> 2 `i `uc ]
+"63
+[; ;config.c: 63:     ADCON1bits.ADFM = 1;
+[e = . . _ADCON1bits 0 3 -> -> 1 `i `uc ]
+"64
+[; ;config.c: 64: }
 [e :UE 1217 ]
 }
-"58
-[; ;config.c: 58: void gyro_config(){
+"65
+[; ;config.c: 65: void gyro_config(){
 [v _gyro_config `(v ~T0 @X0 1 ef ]
 {
 [e :U _gyro_config ]
 [f ]
-"59
-[; ;config.c: 59:     i2c_write(0xD2, 0x20, 0x0F);
-[e ( _i2c_write (3 , , -> -> 210 `i `uc -> -> 32 `i `uc -> -> 15 `i `uc ]
-"60
-[; ;config.c: 60:     i2c_write(0xD2, 0x23, 0x90);
-[e ( _i2c_write (3 , , -> -> 210 `i `uc -> -> 35 `i `uc -> -> 144 `i `uc ]
-"61
-[; ;config.c: 61:     i2c_write(0x32, 0x20, 0x57);
-[e ( _i2c_write (3 , , -> -> 50 `i `uc -> -> 32 `i `uc -> -> 87 `i `uc ]
-"62
-[; ;config.c: 62:     i2c_write(0x32, 0x23, 0x90);
-[e ( _i2c_write (3 , , -> -> 50 `i `uc -> -> 35 `i `uc -> -> 144 `i `uc ]
-"63
-[; ;config.c: 63:     i2c_write(0x3C, 0, 0x18);
-[e ( _i2c_write (3 , , -> -> 60 `i `uc -> -> 0 `i `uc -> -> 24 `i `uc ]
-"64
-[; ;config.c: 64:     i2c_write(0x3C, 1, 0x80);
-[e ( _i2c_write (3 , , -> -> 60 `i `uc -> -> 1 `i `uc -> -> 128 `i `uc ]
-"65
-[; ;config.c: 65:     i2c_write(0x3C, 2, 0);
-[e ( _i2c_write (3 , , -> -> 60 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
 "66
-[; ;config.c: 66: }
+[; ;config.c: 66:     i2c_write(0xD2, 0x20, 0x0F);
+[e ( _i2c_write (3 , , -> -> 210 `i `uc -> -> 32 `i `uc -> -> 15 `i `uc ]
+"67
+[; ;config.c: 67:     i2c_write(0xD2, 0x23, 0x90);
+[e ( _i2c_write (3 , , -> -> 210 `i `uc -> -> 35 `i `uc -> -> 144 `i `uc ]
+"68
+[; ;config.c: 68:     i2c_write(0x32, 0x20, 0x57);
+[e ( _i2c_write (3 , , -> -> 50 `i `uc -> -> 32 `i `uc -> -> 87 `i `uc ]
+"69
+[; ;config.c: 69:     i2c_write(0x32, 0x23, 0x90);
+[e ( _i2c_write (3 , , -> -> 50 `i `uc -> -> 35 `i `uc -> -> 144 `i `uc ]
+"70
+[; ;config.c: 70:     i2c_write(0x3C, 0, 0x18);
+[e ( _i2c_write (3 , , -> -> 60 `i `uc -> -> 0 `i `uc -> -> 24 `i `uc ]
+"71
+[; ;config.c: 71:     i2c_write(0x3C, 1, 0x80);
+[e ( _i2c_write (3 , , -> -> 60 `i `uc -> -> 1 `i `uc -> -> 128 `i `uc ]
+"72
+[; ;config.c: 72:     i2c_write(0x3C, 2, 0);
+[e ( _i2c_write (3 , , -> -> 60 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
+"73
+[; ;config.c: 73: }
 [e :UE 1221 ]
 }
-"68
-[; ;config.c: 68: void read_sensor(){
+"75
+[; ;config.c: 75: void read_sensor(){
 [v _read_sensor `(v ~T0 @X0 1 ef ]
 {
 [e :U _read_sensor ]
 [f ]
-"69
-[; ;config.c: 69:     gyrox = i2c_read(0xD2, 0xA8);
-[e = _gyrox ( _i2c_read (2 , -> -> 210 `i `uc -> -> 168 `i `uc ]
-"70
-[; ;config.c: 70:     gyroy = i2c_read(0xD2, 0xAA);
-[e = _gyroy ( _i2c_read (2 , -> -> 210 `i `uc -> -> 170 `i `uc ]
-"71
-[; ;config.c: 71:     gyroz = i2c_read(0xD2, 0xAC);
-[e = _gyroz ( _i2c_read (2 , -> -> 210 `i `uc -> -> 172 `i `uc ]
-"72
-[; ;config.c: 72:     accx = i2c_read(0x32, 0xA8);
-[e = _accx ( _i2c_read (2 , -> -> 50 `i `uc -> -> 168 `i `uc ]
-"73
-[; ;config.c: 73:     accy = i2c_read(0x32, 0xAA);
-[e = _accy ( _i2c_read (2 , -> -> 50 `i `uc -> -> 170 `i `uc ]
-"74
-[; ;config.c: 74:     accz = i2c_read(0x32, 0xAC);
-[e = _accz ( _i2c_read (2 , -> -> 50 `i `uc -> -> 172 `i `uc ]
-"75
-[; ;config.c: 75:     magx = i2c_read(0x3C, 0x83);
-[e = _magx ( _i2c_read (2 , -> -> 60 `i `uc -> -> 131 `i `uc ]
 "76
-[; ;config.c: 76:     magy = i2c_read(0x3C, 0x85);
-[e = _magy ( _i2c_read (2 , -> -> 60 `i `uc -> -> 133 `i `uc ]
+[; ;config.c: 76:     gyrox = i2c_read(0xD2, 0xA8);
+[e = _gyrox ( _i2c_read (2 , -> -> 210 `i `uc -> -> 168 `i `uc ]
 "77
-[; ;config.c: 77:     magz = i2c_read(0x3C, 0x87);
-[e = _magz ( _i2c_read (2 , -> -> 60 `i `uc -> -> 135 `i `uc ]
+[; ;config.c: 77:     gyroy = i2c_read(0xD2, 0xAA);
+[e = _gyroy ( _i2c_read (2 , -> -> 210 `i `uc -> -> 170 `i `uc ]
 "78
-[; ;config.c: 78: }
+[; ;config.c: 78:     gyroz = i2c_read(0xD2, 0xAC);
+[e = _gyroz ( _i2c_read (2 , -> -> 210 `i `uc -> -> 172 `i `uc ]
+"79
+[; ;config.c: 79:     accx = i2c_read(0x32, 0xA8);
+[e = _accx ( _i2c_read (2 , -> -> 50 `i `uc -> -> 168 `i `uc ]
+"80
+[; ;config.c: 80:     accy = i2c_read(0x32, 0xAA);
+[e = _accy ( _i2c_read (2 , -> -> 50 `i `uc -> -> 170 `i `uc ]
+"81
+[; ;config.c: 81:     accz = i2c_read(0x32, 0xAC);
+[e = _accz ( _i2c_read (2 , -> -> 50 `i `uc -> -> 172 `i `uc ]
+"82
+[; ;config.c: 82:     magx = i2c_read(0x3C, 0x83);
+[e = _magx ( _i2c_read (2 , -> -> 60 `i `uc -> -> 131 `i `uc ]
+"83
+[; ;config.c: 83:     magy = i2c_read(0x3C, 0x85);
+[e = _magy ( _i2c_read (2 , -> -> 60 `i `uc -> -> 133 `i `uc ]
+"84
+[; ;config.c: 84:     magz = i2c_read(0x3C, 0x87);
+[e = _magz ( _i2c_read (2 , -> -> 60 `i `uc -> -> 135 `i `uc ]
+"85
+[; ;config.c: 85: }
 [e :UE 1222 ]
 }
-"80
-[; ;config.c: 80: void i2c_write(unsigned char address, unsigned char subaddress, unsigned char data){
+"87
+[; ;config.c: 87: void i2c_write(unsigned char address, unsigned char subaddress, unsigned char data){
 [v _i2c_write `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _i2c_write ]
@@ -1958,628 +2016,674 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _subaddress `uc ~T0 @X0 1 r2 ]
 [v _data `uc ~T0 @X0 1 r3 ]
 [f ]
-"81
-[; ;config.c: 81:     i2c_start();
+"88
+[; ;config.c: 88:     i2c_start();
 [e ( _i2c_start ..  ]
-"82
-[; ;config.c: 82:     i2c_write_byte(address);
+"89
+[; ;config.c: 89:     i2c_write_byte(address);
 [e ( _i2c_write_byte (1 _address ]
-"83
-[; ;config.c: 83:     if(nack())
+"90
+[; ;config.c: 90:     if(nack())
 [e $ ! != ( _nack ..  -> 0 `i 1224  ]
-"84
-[; ;config.c: 84:         return;
+"91
+[; ;config.c: 91:         return;
 [e $UE 1223  ]
 [e :U 1224 ]
-"85
-[; ;config.c: 85:     i2c_write_byte(subaddress);
+"92
+[; ;config.c: 92:     i2c_write_byte(subaddress);
 [e ( _i2c_write_byte (1 _subaddress ]
-"86
-[; ;config.c: 86:     if(nack())
+"93
+[; ;config.c: 93:     if(nack())
 [e $ ! != ( _nack ..  -> 0 `i 1225  ]
-"87
-[; ;config.c: 87:         return;
+"94
+[; ;config.c: 94:         return;
 [e $UE 1223  ]
 [e :U 1225 ]
-"88
-[; ;config.c: 88:     i2c_write_byte(data);
+"95
+[; ;config.c: 95:     i2c_write_byte(data);
 [e ( _i2c_write_byte (1 _data ]
-"89
-[; ;config.c: 89:     if(nack())
+"96
+[; ;config.c: 96:     if(nack())
 [e $ ! != ( _nack ..  -> 0 `i 1226  ]
-"90
-[; ;config.c: 90:         return;
+"97
+[; ;config.c: 97:         return;
 [e $UE 1223  ]
 [e :U 1226 ]
-"91
-[; ;config.c: 91:     i2c_stop();
+"98
+[; ;config.c: 98:     i2c_stop();
 [e ( _i2c_stop ..  ]
-"92
-[; ;config.c: 92: }
+"99
+[; ;config.c: 99: }
 [e :UE 1223 ]
 }
-"94
-[; ;config.c: 94: int i2c_read(unsigned char address, unsigned char subaddress){
+"101
+[; ;config.c: 101: int i2c_read(unsigned char address, unsigned char subaddress){
 [v _i2c_read `(i ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _i2c_read ]
 [v _address `uc ~T0 @X0 1 r1 ]
 [v _subaddress `uc ~T0 @X0 1 r2 ]
 [f ]
-"95
-[; ;config.c: 95:     int low, high;
+"102
+[; ;config.c: 102:     int low, high;
 [v _low `i ~T0 @X0 1 a ]
 [v _high `i ~T0 @X0 1 a ]
-"96
-[; ;config.c: 96:     i2c_start();
+"103
+[; ;config.c: 103:     i2c_start();
 [e ( _i2c_start ..  ]
-"97
-[; ;config.c: 97:     i2c_write_byte(address);
+"104
+[; ;config.c: 104:     i2c_write_byte(address);
 [e ( _i2c_write_byte (1 _address ]
-"98
-[; ;config.c: 98:     if(nack())
+"105
+[; ;config.c: 105:     if(nack())
 [e $ ! != ( _nack ..  -> 0 `i 1228  ]
-"99
-[; ;config.c: 99:         return 0;
+"106
+[; ;config.c: 106:         return 0;
 [e ) -> 0 `i ]
 [e $UE 1227  ]
 [e :U 1228 ]
-"101
-[; ;config.c: 101:     i2c_write_byte(subaddress);
+"108
+[; ;config.c: 108:     i2c_write_byte(subaddress);
 [e ( _i2c_write_byte (1 _subaddress ]
-"102
-[; ;config.c: 102:     if(nack())
+"109
+[; ;config.c: 109:     if(nack())
 [e $ ! != ( _nack ..  -> 0 `i 1229  ]
-"103
-[; ;config.c: 103:         return 0;
+"110
+[; ;config.c: 110:         return 0;
 [e ) -> 0 `i ]
 [e $UE 1227  ]
 [e :U 1229 ]
-"104
-[; ;config.c: 104:     i2c_restart();
+"111
+[; ;config.c: 111:     i2c_restart();
 [e ( _i2c_restart ..  ]
-"105
-[; ;config.c: 105:     i2c_write_byte(address | 1);
+"112
+[; ;config.c: 112:     i2c_write_byte(address | 1);
 [e ( _i2c_write_byte (1 -> | -> _address `i -> 1 `i `uc ]
-"106
-[; ;config.c: 106:     if(nack())
+"113
+[; ;config.c: 113:     if(nack())
 [e $ ! != ( _nack ..  -> 0 `i 1230  ]
-"107
-[; ;config.c: 107:         return 0;
+"114
+[; ;config.c: 114:         return 0;
 [e ) -> 0 `i ]
 [e $UE 1227  ]
 [e :U 1230 ]
-"108
-[; ;config.c: 108:     low = i2c_read_byte(0);
+"115
+[; ;config.c: 115:     low = i2c_read_byte(0);
 [e = _low ( _i2c_read_byte (1 -> -> 0 `i `uc ]
-"109
-[; ;config.c: 109:     high = i2c_read_byte(1);
+"116
+[; ;config.c: 116:     high = i2c_read_byte(1);
 [e = _high ( _i2c_read_byte (1 -> -> 1 `i `uc ]
-"110
-[; ;config.c: 110:     i2c_stop();
+"117
+[; ;config.c: 117:     i2c_stop();
 [e ( _i2c_stop ..  ]
-"111
-[; ;config.c: 111:     if(address != 0x3C)
+"118
+[; ;config.c: 118:     if(address != 0x3C)
 [e $ ! != -> _address `i -> 60 `i 1231  ]
-"112
-[; ;config.c: 112:         return((high << 8) | low);
+"119
+[; ;config.c: 119:         return((high << 8) | low);
 [e ) | << _high -> 8 `i _low ]
 [e $UE 1227  ]
 [e $U 1232  ]
-"113
-[; ;config.c: 113:     else
+"120
+[; ;config.c: 120:     else
 [e :U 1231 ]
-"114
-[; ;config.c: 114:         return((low << 8) | high);
+"121
+[; ;config.c: 121:         return((low << 8) | high);
 [e ) | << _low -> 8 `i _high ]
 [e $UE 1227  ]
 [e :U 1232 ]
-"115
-[; ;config.c: 115: }
+"122
+[; ;config.c: 122: }
 [e :UE 1227 ]
 }
-"117
-[; ;config.c: 117: int i2c_read_byte(unsigned char ack){
+"124
+[; ;config.c: 124: int i2c_read_byte(unsigned char ack){
 [v _i2c_read_byte `(i ~T0 @X0 1 ef1`uc ]
 {
 [e :U _i2c_read_byte ]
 [v _ack `uc ~T0 @X0 1 r1 ]
 [f ]
-"118
-[; ;config.c: 118:     int temp;
+"125
+[; ;config.c: 125:     int temp;
 [v _temp `i ~T0 @X0 1 a ]
-"119
-[; ;config.c: 119:     SSP1CON2bits.RCEN = 1;
+"126
+[; ;config.c: 126:     SSP1CON2bits.RCEN = 1;
 [e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
-"120
-[; ;config.c: 120:     while(RCEN);
+"127
+[; ;config.c: 127:     while(RCEN);
 [e $U 1234  ]
 [e :U 1235 ]
 [e :U 1234 ]
 [e $ _RCEN 1235  ]
 [e :U 1236 ]
-"121
-[; ;config.c: 121:     temp = SSP1BUF;
+"128
+[; ;config.c: 128:     temp = SSP1BUF;
 [e = _temp -> _SSP1BUF `i ]
-"122
-[; ;config.c: 122:     PIR1bits.SSP1IF = 0;
+"129
+[; ;config.c: 129:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"124
-[; ;config.c: 124:     SSP1CON2bits.ACKDT = ack;
+"131
+[; ;config.c: 131:     SSP1CON2bits.ACKDT = ack;
 [e = . . _SSP1CON2bits 0 5 _ack ]
-"125
-[; ;config.c: 125:     SSP1CON2bits.ACKEN = 1;
+"132
+[; ;config.c: 132:     SSP1CON2bits.ACKEN = 1;
 [e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
-"126
-[; ;config.c: 126:     while(SSP1CON2bits.ACKEN);
+"133
+[; ;config.c: 133:     while(SSP1CON2bits.ACKEN);
 [e $U 1237  ]
 [e :U 1238 ]
 [e :U 1237 ]
 [e $ != -> . . _SSP1CON2bits 0 4 `i -> 0 `i 1238  ]
 [e :U 1239 ]
-"127
-[; ;config.c: 127:     PIR1bits.SSP1IF = 0;
+"134
+[; ;config.c: 134:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"128
-[; ;config.c: 128:     return temp;
+"135
+[; ;config.c: 135:     return temp;
 [e ) _temp ]
 [e $UE 1233  ]
-"129
-[; ;config.c: 129: }
+"136
+[; ;config.c: 136: }
 [e :UE 1233 ]
 }
-"131
-[; ;config.c: 131: int nack(){
+"138
+[; ;config.c: 138: int nack(){
 [v _nack `(i ~T0 @X0 1 ef ]
 {
 [e :U _nack ]
 [f ]
-"132
-[; ;config.c: 132:     if(SSP1CON2bits.ACKSTAT){
+"139
+[; ;config.c: 139:     if(SSP1CON2bits.ACKSTAT){
 [e $ ! != -> . . _SSP1CON2bits 0 6 `i -> 0 `i 1241  ]
 {
-"133
-[; ;config.c: 133:         i2c_stop();
+"140
+[; ;config.c: 140:         i2c_stop();
 [e ( _i2c_stop ..  ]
-"134
-[; ;config.c: 134:         return 1;
+"141
+[; ;config.c: 141:         return 1;
 [e ) -> 1 `i ]
 [e $UE 1240  ]
-"135
-[; ;config.c: 135:     }
+"142
+[; ;config.c: 142:     }
 }
 [e :U 1241 ]
-"136
-[; ;config.c: 136:     return 0;
+"143
+[; ;config.c: 143:     return 0;
 [e ) -> 0 `i ]
 [e $UE 1240  ]
-"137
-[; ;config.c: 137: }
+"144
+[; ;config.c: 144: }
 [e :UE 1240 ]
 }
-"139
-[; ;config.c: 139: void i2c_start(){
+"146
+[; ;config.c: 146: void i2c_start(){
 [v _i2c_start `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_start ]
 [f ]
-"140
-[; ;config.c: 140:     SSP1CON2bits.SEN = 1;
+"147
+[; ;config.c: 147:     SSP1CON2bits.SEN = 1;
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
-"141
-[; ;config.c: 141:     while((SSP1CON2bits.SEN));
+"148
+[; ;config.c: 148:     while((SSP1CON2bits.SEN));
 [e $U 1243  ]
 [e :U 1244 ]
 [e :U 1243 ]
 [e $ != -> . . _SSP1CON2bits 0 0 `i -> 0 `i 1244  ]
 [e :U 1245 ]
-"142
-[; ;config.c: 142:     PIR1bits.SSP1IF = 0;
+"149
+[; ;config.c: 149:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"143
-[; ;config.c: 143: }
+"150
+[; ;config.c: 150: }
 [e :UE 1242 ]
 }
-"145
-[; ;config.c: 145: void i2c_restart(){
+"152
+[; ;config.c: 152: void i2c_restart(){
 [v _i2c_restart `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_restart ]
 [f ]
-"146
-[; ;config.c: 146:     SSPCON2bits.RSEN = 1;
+"153
+[; ;config.c: 153:     SSPCON2bits.RSEN = 1;
 [e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
-"147
-[; ;config.c: 147:     while(SSPCON2bits.RSEN);
+"154
+[; ;config.c: 154:     while(SSPCON2bits.RSEN);
 [e $U 1247  ]
 [e :U 1248 ]
 [e :U 1247 ]
 [e $ != -> . . _SSPCON2bits 0 1 `i -> 0 `i 1248  ]
 [e :U 1249 ]
-"148
-[; ;config.c: 148:     PIR1bits.SSP1IF = 0;
+"155
+[; ;config.c: 155:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"149
-[; ;config.c: 149: }
+"156
+[; ;config.c: 156: }
 [e :UE 1246 ]
 }
-"151
-[; ;config.c: 151: void i2c_write_byte(unsigned char address){
+"158
+[; ;config.c: 158: void i2c_write_byte(unsigned char address){
 [v _i2c_write_byte `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _i2c_write_byte ]
 [v _address `uc ~T0 @X0 1 r1 ]
 [f ]
-"152
-[; ;config.c: 152:     SSP1CON2bits.RCEN = 0;
+"159
+[; ;config.c: 159:     SSP1CON2bits.RCEN = 0;
 [e = . . _SSP1CON2bits 0 3 -> -> 0 `i `uc ]
-"153
-[; ;config.c: 153:     SSP1BUF = address;
+"160
+[; ;config.c: 160:     SSP1BUF = address;
 [e = _SSP1BUF _address ]
-"154
-[; ;config.c: 154:     while(SSP1STATbits.BF);
+"161
+[; ;config.c: 161:     while(SSP1STATbits.BF);
 [e $U 1251  ]
 [e :U 1252 ]
 [e :U 1251 ]
 [e $ != -> . . _SSP1STATbits 0 0 `i -> 0 `i 1252  ]
 [e :U 1253 ]
-"155
-[; ;config.c: 155:     PIR1bits.SSP1IF = 0;
+"162
+[; ;config.c: 162:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"156
-[; ;config.c: 156:     if(SSP1CON1bits.WCOL)
+"163
+[; ;config.c: 163:     if(SSP1CON1bits.WCOL)
 [e $ ! != -> . . _SSP1CON1bits 0 4 `i -> 0 `i 1254  ]
-"157
-[; ;config.c: 157:         SSP1CON1bits.WCOL = 0;
+"164
+[; ;config.c: 164:         SSP1CON1bits.WCOL = 0;
 [e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
 [e :U 1254 ]
-"158
-[; ;config.c: 158: }
+"165
+[; ;config.c: 165: }
 [e :UE 1250 ]
 }
-"160
-[; ;config.c: 160: void i2c_stop(){
+"167
+[; ;config.c: 167: void i2c_stop(){
 [v _i2c_stop `(v ~T0 @X0 1 ef ]
 {
 [e :U _i2c_stop ]
 [f ]
-"161
-[; ;config.c: 161:     SSP1CON2bits.PEN = 1;
+"168
+[; ;config.c: 168:     SSP1CON2bits.PEN = 1;
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
-"162
-[; ;config.c: 162:     while(SSP1CON2bits.PEN);
+"169
+[; ;config.c: 169:     while(SSP1CON2bits.PEN);
 [e $U 1256  ]
 [e :U 1257 ]
 [e :U 1256 ]
 [e $ != -> . . _SSP1CON2bits 0 2 `i -> 0 `i 1257  ]
 [e :U 1258 ]
-"163
-[; ;config.c: 163:     PIR1bits.SSP1IF = 0;
+"170
+[; ;config.c: 170:     PIR1bits.SSP1IF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"164
-[; ;config.c: 164: }
+"171
+[; ;config.c: 171: }
 [e :UE 1255 ]
 }
+"173
+[; ;config.c: 173: void calculate_pid(void){
+[v _calculate_pid `(v ~T0 @X0 1 ef ]
+{
+[e :U _calculate_pid ]
+[f ]
+"175
+[; ;config.c: 175: }
+[e :UE 1259 ]
+}
+"177
+[; ;config.c: 177: void balance_drone(){
+[v _balance_drone `(v ~T0 @X0 1 ef ]
+{
+[e :U _balance_drone ]
+[f ]
+"179
+[; ;config.c: 179: }
+[e :UE 1260 ]
+}
+"181
+[; ;config.c: 181: void battery_compensation(){
+[v _battery_compensation `(v ~T0 @X0 1 ef ]
+{
+[e :U _battery_compensation ]
+[f ]
+"183
+[; ;config.c: 183:     ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
+"184
+[; ;config.c: 184:     while(ADCON0bits.GO);
+[e $U 1262  ]
+[e :U 1263 ]
+[e :U 1262 ]
+[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 1263  ]
+[e :U 1264 ]
+"185
+[; ;config.c: 185:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"186
+[; ;config.c: 186:     voltage = (unsigned)((ADRESH << 8) | ADRESL);
+[e = _voltage -> | << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+"188
+[; ;config.c: 188: }
+[e :UE 1261 ]
+}
 [v $root$_remote `(v ~T0 @X0 0 e ]
-"166
-[; ;config.c: 166: void __attribute__((picinterrupt(("")))) remote(){
+"190
+[; ;config.c: 190: void __attribute__((picinterrupt(("")))) remote(){
 [v _remote `(v ~T2 @X0 1 ef ]
 {
 [e :U _remote ]
 [f ]
-"168
-[; ;config.c: 168:     if(INTCONbits.T0IF)
-[e $ ! != -> . . _INTCONbits 1 1 `i -> 0 `i 1260  ]
-"169
-[; ;config.c: 169:     {
-{
-"170
-[; ;config.c: 170:         TMR0H++;
-[e ++ _TMR0H -> -> 1 `i `ui ]
-"171
-[; ;config.c: 171:         INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
-"172
-[; ;config.c: 172:     }
-}
-[e :U 1260 ]
-"174
-[; ;config.c: 174:     if(PIR1bits.TMR2IF){
-[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 1261  ]
-{
-"175
-[; ;config.c: 175:         TMR2H++;
-[e ++ _TMR2H -> -> 1 `i `ui ]
-"176
-[; ;config.c: 176:         PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"177
-[; ;config.c: 177:     }
-}
-[e :U 1261 ]
-"179
-[; ;config.c: 179:     if(INTCONbits.IOCIF){
-[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 1262  ]
-{
-"180
-[; ;config.c: 180:         if(IOCCFbits.IOCCF3)
-[e $ ! != -> . . _IOCCFbits 0 3 `i -> 0 `i 1263  ]
-"181
-[; ;config.c: 181:         {
-{
-"182
-[; ;config.c: 182:             if(p.p1)
-[e $ ! != -> . _p 0 `i -> 0 `i 1264  ]
-"183
-[; ;config.c: 183:             {
-{
-"184
-[; ;config.c: 184:                 T1CONbits.TMR1ON = 0;
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"185
-[; ;config.c: 185:                 if(TMR1 < 2100)
-[e $ ! < -> _TMR1 `ui -> -> 2100 `i `ui 1265  ]
-"186
-[; ;config.c: 186:                     ch1 = TMR1;
-[e = _ch1 -> _TMR1 `ui ]
-[e :U 1265 ]
-"187
-[; ;config.c: 187:                 IOCCN &= 0b11110111;
-[e =& _IOCCN -> -> 247 `i `Vuc ]
-"188
-[; ;config.c: 188:                 IOCCP |= 0b00001000;
-[e =| _IOCCP -> -> 8 `i `Vuc ]
-"189
-[; ;config.c: 189:                 p.p1 = 0;
-[e = . _p 0 -> -> 0 `i `uc ]
-"190
-[; ;config.c: 190:             }
-}
-[e $U 1266  ]
-"191
-[; ;config.c: 191:             else
-[e :U 1264 ]
 "192
-[; ;config.c: 192:             {
-{
+[; ;config.c: 192:     if(INTCONbits.T0IF)
+[e $ ! != -> . . _INTCONbits 1 1 `i -> 0 `i 1266  ]
 "193
-[; ;config.c: 193:                 T1CONbits.TMR1ON = 1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;config.c: 193:     {
+{
 "194
-[; ;config.c: 194:                 TMR1 = 0;
-[e = _TMR1 -> -> 0 `i `us ]
+[; ;config.c: 194:         TMR0H++;
+[e ++ _TMR0H -> -> 1 `i `ui ]
 "195
-[; ;config.c: 195:                 IOCCP &= 0b11110111;
-[e =& _IOCCP -> -> 247 `i `Vuc ]
+[; ;config.c: 195:         INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
 "196
-[; ;config.c: 196:                 IOCCN |= 0b00001000;
-[e =| _IOCCN -> -> 8 `i `Vuc ]
-"197
-[; ;config.c: 197:                 p.p1 = 1;
-[e = . _p 0 -> -> 1 `i `uc ]
-"198
-[; ;config.c: 198:             }
+[; ;config.c: 196:     }
 }
 [e :U 1266 ]
+"198
+[; ;config.c: 198:     if(PIR1bits.TMR2IF){
+[e $ ! != -> . . _PIR1bits 0 1 `i -> 0 `i 1267  ]
+{
 "199
-[; ;config.c: 199:         }
-}
-[e :U 1263 ]
+[; ;config.c: 199:         TMR2H++;
+[e ++ _TMR2H -> -> 1 `i `ui ]
+"200
+[; ;config.c: 200:         PIR1bits.TMR2IF = 0;
+[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
 "201
-[; ;config.c: 201:         if(IOCCFbits.IOCCF4)
-[e $ ! != -> . . _IOCCFbits 0 4 `i -> 0 `i 1267  ]
-"202
-[; ;config.c: 202:         {
-{
-"203
-[; ;config.c: 203:             if(p.p2)
-[e $ ! != -> . _p 1 `i -> 0 `i 1268  ]
-"204
-[; ;config.c: 204:             {
-{
-"205
-[; ;config.c: 205:                 T3CONbits.TMR3ON = 0;
-[e = . . _T3CONbits 0 0 -> -> 0 `i `uc ]
-"206
-[; ;config.c: 206:                 IOCCN &= 0b11101111;
-[e =& _IOCCN -> -> 239 `i `Vuc ]
-"207
-[; ;config.c: 207:                 IOCCP |= 0b00010000;
-[e =| _IOCCP -> -> 16 `i `Vuc ]
-"208
-[; ;config.c: 208:                 if(TMR3H < 9)
-[e $ ! < -> _TMR3H `i -> 9 `i 1269  ]
-"209
-[; ;config.c: 209:                     ch2 = ((unsigned)TMR3H<<8) | (unsigned)TMR3L;
-[e = _ch2 | << -> _TMR3H `ui -> 8 `i -> _TMR3L `ui ]
-[e :U 1269 ]
-"210
-[; ;config.c: 210:                 p.p2 = 0;
-[e = . _p 1 -> -> 0 `i `uc ]
-"211
-[; ;config.c: 211:             }
-}
-[e $U 1270  ]
-"212
-[; ;config.c: 212:             else
-[e :U 1268 ]
-"213
-[; ;config.c: 213:             {
-{
-"214
-[; ;config.c: 214:                 IOCCN |= 0b00010000;
-[e =| _IOCCN -> -> 16 `i `Vuc ]
-"215
-[; ;config.c: 215:                 IOCCP &= 0b11101111;
-[e =& _IOCCP -> -> 239 `i `Vuc ]
-"216
-[; ;config.c: 216:                 TMR3L = 0;
-[e = _TMR3L -> -> 0 `i `uc ]
-"217
-[; ;config.c: 217:                 TMR3H = 0;
-[e = _TMR3H -> -> 0 `i `uc ]
-"218
-[; ;config.c: 218:                 TMR3L = 0;
-[e = _TMR3L -> -> 0 `i `uc ]
-"219
-[; ;config.c: 219:                 T3CONbits.TMR3ON = 1;
-[e = . . _T3CONbits 0 0 -> -> 1 `i `uc ]
-"220
-[; ;config.c: 220:                 p.p2 = 1;
-[e = . _p 1 -> -> 1 `i `uc ]
-"221
-[; ;config.c: 221:             }
-}
-[e :U 1270 ]
-"222
-[; ;config.c: 222:         }
+[; ;config.c: 201:     }
 }
 [e :U 1267 ]
-"224
-[; ;config.c: 224:         if(IOCCFbits.IOCCF5)
-[e $ ! != -> . . _IOCCFbits 0 5 `i -> 0 `i 1271  ]
-"225
-[; ;config.c: 225:         {
+"203
+[; ;config.c: 203:     if(INTCONbits.IOCIF){
+[e $ ! != -> . . _INTCONbits 0 0 `i -> 0 `i 1268  ]
 {
-"226
-[; ;config.c: 226:             if(p.p3)
-[e $ ! != -> . _p 2 `i -> 0 `i 1272  ]
-"227
-[; ;config.c: 227:             {
+"204
+[; ;config.c: 204:         if(IOCCFbits.IOCCF3)
+[e $ ! != -> . . _IOCCFbits 0 3 `i -> 0 `i 1269  ]
+"205
+[; ;config.c: 205:         {
 {
-"228
-[; ;config.c: 228:                 T5CONbits.TMR5ON = 0;
-[e = . . _T5CONbits 0 0 -> -> 0 `i `uc ]
-"229
-[; ;config.c: 229:                 IOCCN &= 0b11011111;
-[e =& _IOCCN -> -> 223 `i `Vuc ]
-"230
-[; ;config.c: 230:                 IOCCP |= 0b00100000;
-[e =| _IOCCP -> -> 32 `i `Vuc ]
-"231
-[; ;config.c: 231:                 if(TMR5H < 9)
-[e $ ! < -> _TMR5H `i -> 9 `i 1273  ]
-"232
-[; ;config.c: 232:                     ch3 = ((unsigned)TMR5H << 8) | (unsigned)TMR5L;
-[e = _ch3 | << -> _TMR5H `ui -> 8 `i -> _TMR5L `ui ]
-[e :U 1273 ]
-"233
-[; ;config.c: 233:                 p.p3 = 0;
-[e = . _p 2 -> -> 0 `i `uc ]
-"234
-[; ;config.c: 234:             }
-}
-[e $U 1274  ]
-"235
-[; ;config.c: 235:             else
-[e :U 1272 ]
-"236
-[; ;config.c: 236:             {
+"206
+[; ;config.c: 206:             if(p.p1)
+[e $ ! != -> . _p 0 `i -> 0 `i 1270  ]
+"207
+[; ;config.c: 207:             {
 {
-"237
-[; ;config.c: 237:                 IOCCN |= 0b00100000;
-[e =| _IOCCN -> -> 32 `i `Vuc ]
-"238
-[; ;config.c: 238:                 IOCCP &= 0b11011111;
-[e =& _IOCCP -> -> 223 `i `Vuc ]
-"239
-[; ;config.c: 239:                 TMR5L = 0;
-[e = _TMR5L -> -> 0 `i `uc ]
-"240
-[; ;config.c: 240:                 TMR5H = 0;
-[e = _TMR5H -> -> 0 `i `uc ]
-"241
-[; ;config.c: 241:                 T5CONbits.TMR5ON = 1;
-[e = . . _T5CONbits 0 0 -> -> 1 `i `uc ]
-"242
-[; ;config.c: 242:                 p.p3 = 1;
-[e = . _p 2 -> -> 1 `i `uc ]
-"243
-[; ;config.c: 243:             }
-}
-[e :U 1274 ]
-"244
-[; ;config.c: 244:         }
-}
+"208
+[; ;config.c: 208:                 T1CONbits.TMR1ON = 0;
+[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+"209
+[; ;config.c: 209:                 if(TMR1 < 2100)
+[e $ ! < -> _TMR1 `ui -> -> 2100 `i `ui 1271  ]
+"210
+[; ;config.c: 210:                     ch1 = TMR1;
+[e = _ch1 -> _TMR1 `ui ]
 [e :U 1271 ]
-"246
-[; ;config.c: 246:         if(IOCCFbits.IOCCF6)
-[e $ ! != -> . . _IOCCFbits 0 6 `i -> 0 `i 1275  ]
-"247
-[; ;config.c: 247:         {
+"211
+[; ;config.c: 211:                 IOCCN &= 0b11110111;
+[e =& _IOCCN -> -> 247 `i `Vuc ]
+"212
+[; ;config.c: 212:                 IOCCP |= 0b00001000;
+[e =| _IOCCP -> -> 8 `i `Vuc ]
+"213
+[; ;config.c: 213:                 p.p1 = 0;
+[e = . _p 0 -> -> 0 `i `uc ]
+"214
+[; ;config.c: 214:             }
+}
+[e $U 1272  ]
+"215
+[; ;config.c: 215:             else
+[e :U 1270 ]
+"216
+[; ;config.c: 216:             {
 {
+"217
+[; ;config.c: 217:                 T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"218
+[; ;config.c: 218:                 TMR1 = 0;
+[e = _TMR1 -> -> 0 `i `us ]
+"219
+[; ;config.c: 219:                 IOCCP &= 0b11110111;
+[e =& _IOCCP -> -> 247 `i `Vuc ]
+"220
+[; ;config.c: 220:                 IOCCN |= 0b00001000;
+[e =| _IOCCN -> -> 8 `i `Vuc ]
+"221
+[; ;config.c: 221:                 p.p1 = 1;
+[e = . _p 0 -> -> 1 `i `uc ]
+"222
+[; ;config.c: 222:             }
+}
+[e :U 1272 ]
+"223
+[; ;config.c: 223:         }
+}
+[e :U 1269 ]
+"225
+[; ;config.c: 225:         if(IOCCFbits.IOCCF4)
+[e $ ! != -> . . _IOCCFbits 0 4 `i -> 0 `i 1273  ]
+"226
+[; ;config.c: 226:         {
+{
+"227
+[; ;config.c: 227:             if(p.p2)
+[e $ ! != -> . _p 1 `i -> 0 `i 1274  ]
+"228
+[; ;config.c: 228:             {
+{
+"229
+[; ;config.c: 229:                 T3CONbits.TMR3ON = 0;
+[e = . . _T3CONbits 0 0 -> -> 0 `i `uc ]
+"230
+[; ;config.c: 230:                 IOCCN &= 0b11101111;
+[e =& _IOCCN -> -> 239 `i `Vuc ]
+"231
+[; ;config.c: 231:                 IOCCP |= 0b00010000;
+[e =| _IOCCP -> -> 16 `i `Vuc ]
+"232
+[; ;config.c: 232:                 if(TMR3H < 9)
+[e $ ! < -> _TMR3H `i -> 9 `i 1275  ]
+"233
+[; ;config.c: 233:                     ch2 = ((unsigned)TMR3H<<8) | (unsigned)TMR3L;
+[e = _ch2 | << -> _TMR3H `ui -> 8 `i -> _TMR3L `ui ]
+[e :U 1275 ]
+"234
+[; ;config.c: 234:                 p.p2 = 0;
+[e = . _p 1 -> -> 0 `i `uc ]
+"235
+[; ;config.c: 235:             }
+}
+[e $U 1276  ]
+"236
+[; ;config.c: 236:             else
+[e :U 1274 ]
+"237
+[; ;config.c: 237:             {
+{
+"238
+[; ;config.c: 238:                 IOCCN |= 0b00010000;
+[e =| _IOCCN -> -> 16 `i `Vuc ]
+"239
+[; ;config.c: 239:                 IOCCP &= 0b11101111;
+[e =& _IOCCP -> -> 239 `i `Vuc ]
+"240
+[; ;config.c: 240:                 TMR3L = 0;
+[e = _TMR3L -> -> 0 `i `uc ]
+"241
+[; ;config.c: 241:                 TMR3H = 0;
+[e = _TMR3H -> -> 0 `i `uc ]
+"242
+[; ;config.c: 242:                 TMR3L = 0;
+[e = _TMR3L -> -> 0 `i `uc ]
+"243
+[; ;config.c: 243:                 T3CONbits.TMR3ON = 1;
+[e = . . _T3CONbits 0 0 -> -> 1 `i `uc ]
+"244
+[; ;config.c: 244:                 p.p2 = 1;
+[e = . _p 1 -> -> 1 `i `uc ]
+"245
+[; ;config.c: 245:             }
+}
+[e :U 1276 ]
+"246
+[; ;config.c: 246:         }
+}
+[e :U 1273 ]
 "248
-[; ;config.c: 248:             if(p.p4)
-[e $ ! != -> . _p 3 `i -> 0 `i 1276  ]
+[; ;config.c: 248:         if(IOCCFbits.IOCCF5)
+[e $ ! != -> . . _IOCCFbits 0 5 `i -> 0 `i 1277  ]
 "249
-[; ;config.c: 249:             {
+[; ;config.c: 249:         {
 {
 "250
-[; ;config.c: 250:                 T2CONbits.ON = 0;
-[e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
+[; ;config.c: 250:             if(p.p3)
+[e $ ! != -> . _p 2 `i -> 0 `i 1278  ]
 "251
-[; ;config.c: 251:                 IOCCN &= 0b10111111;
-[e =& _IOCCN -> -> 191 `i `Vuc ]
-"252
-[; ;config.c: 252:                 IOCCP |= 0b01000000;
-[e =| _IOCCP -> -> 64 `i `Vuc ]
-"253
-[; ;config.c: 253:                 if(TMR2H < 9)
-[e $ ! < _TMR2H -> -> 9 `i `ui 1277  ]
-"254
-[; ;config.c: 254:                     ch4 = (TMR2H<<8) | TMR2;
-[e = _ch4 | << _TMR2H -> 8 `i -> _TMR2 `ui ]
-[e :U 1277 ]
-"255
-[; ;config.c: 255:                 p.p4 = 0;
-[e = . _p 3 -> -> 0 `i `uc ]
-"256
-[; ;config.c: 256:             }
-}
-[e $U 1278  ]
-"257
-[; ;config.c: 257:             else
-[e :U 1276 ]
-"258
-[; ;config.c: 258:             {
+[; ;config.c: 251:             {
 {
+"252
+[; ;config.c: 252:                 T5CONbits.TMR5ON = 0;
+[e = . . _T5CONbits 0 0 -> -> 0 `i `uc ]
+"253
+[; ;config.c: 253:                 IOCCN &= 0b11011111;
+[e =& _IOCCN -> -> 223 `i `Vuc ]
+"254
+[; ;config.c: 254:                 IOCCP |= 0b00100000;
+[e =| _IOCCP -> -> 32 `i `Vuc ]
+"255
+[; ;config.c: 255:                 if(TMR5H < 9)
+[e $ ! < -> _TMR5H `i -> 9 `i 1279  ]
+"256
+[; ;config.c: 256:                     ch3 = ((unsigned)TMR5H << 8) | (unsigned)TMR5L;
+[e = _ch3 | << -> _TMR5H `ui -> 8 `i -> _TMR5L `ui ]
+[e :U 1279 ]
+"257
+[; ;config.c: 257:                 p.p3 = 0;
+[e = . _p 2 -> -> 0 `i `uc ]
+"258
+[; ;config.c: 258:             }
+}
+[e $U 1280  ]
 "259
-[; ;config.c: 259:                 IOCCN |= 0b01000000;
-[e =| _IOCCN -> -> 64 `i `Vuc ]
-"260
-[; ;config.c: 260:                 IOCCP &= 0b10111111;
-[e =& _IOCCP -> -> 191 `i `Vuc ]
-"261
-[; ;config.c: 261:                 TMR2 = 0;
-[e = _TMR2 -> -> 0 `i `uc ]
-"262
-[; ;config.c: 262:                 TMR2H = 0;
-[e = _TMR2H -> -> 0 `i `ui ]
-"263
-[; ;config.c: 263:                 T2CONbits.ON = 1;
-[e = . . _T2CONbits 0 2 -> -> 1 `i `uc ]
-"264
-[; ;config.c: 264:                 p.p4 = 1;
-[e = . _p 3 -> -> 1 `i `uc ]
-"265
-[; ;config.c: 265:             }
-}
+[; ;config.c: 259:             else
 [e :U 1278 ]
+"260
+[; ;config.c: 260:             {
+{
+"261
+[; ;config.c: 261:                 IOCCN |= 0b00100000;
+[e =| _IOCCN -> -> 32 `i `Vuc ]
+"262
+[; ;config.c: 262:                 IOCCP &= 0b11011111;
+[e =& _IOCCP -> -> 223 `i `Vuc ]
+"263
+[; ;config.c: 263:                 TMR5L = 0;
+[e = _TMR5L -> -> 0 `i `uc ]
+"264
+[; ;config.c: 264:                 TMR5H = 0;
+[e = _TMR5H -> -> 0 `i `uc ]
+"265
+[; ;config.c: 265:                 T5CONbits.TMR5ON = 1;
+[e = . . _T5CONbits 0 0 -> -> 1 `i `uc ]
 "266
-[; ;config.c: 266:         }
-}
-[e :U 1275 ]
+[; ;config.c: 266:                 p.p3 = 1;
+[e = . _p 2 -> -> 1 `i `uc ]
 "267
-[; ;config.c: 267:         IOCCF = 0;
-[e = _IOCCF -> -> 0 `i `uc ]
-"268
-[; ;config.c: 268:         INTCONbits.IOCIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"269
-[; ;config.c: 269:     }
+[; ;config.c: 267:             }
 }
-[e :U 1262 ]
+[e :U 1280 ]
+"268
+[; ;config.c: 268:         }
+}
+[e :U 1277 ]
 "270
-[; ;config.c: 270: }
-[e :UE 1259 ]
+[; ;config.c: 270:         if(IOCCFbits.IOCCF6)
+[e $ ! != -> . . _IOCCFbits 0 6 `i -> 0 `i 1281  ]
+"271
+[; ;config.c: 271:         {
+{
+"272
+[; ;config.c: 272:             if(p.p4)
+[e $ ! != -> . _p 3 `i -> 0 `i 1282  ]
+"273
+[; ;config.c: 273:             {
+{
+"274
+[; ;config.c: 274:                 T2CONbits.ON = 0;
+[e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
+"275
+[; ;config.c: 275:                 IOCCN &= 0b10111111;
+[e =& _IOCCN -> -> 191 `i `Vuc ]
+"276
+[; ;config.c: 276:                 IOCCP |= 0b01000000;
+[e =| _IOCCP -> -> 64 `i `Vuc ]
+"277
+[; ;config.c: 277:                 if(TMR2H < 9)
+[e $ ! < _TMR2H -> -> 9 `i `ui 1283  ]
+"278
+[; ;config.c: 278:                     ch4 = (TMR2H<<8) | TMR2;
+[e = _ch4 | << _TMR2H -> 8 `i -> _TMR2 `ui ]
+[e :U 1283 ]
+"279
+[; ;config.c: 279:                 p.p4 = 0;
+[e = . _p 3 -> -> 0 `i `uc ]
+"280
+[; ;config.c: 280:             }
+}
+[e $U 1284  ]
+"281
+[; ;config.c: 281:             else
+[e :U 1282 ]
+"282
+[; ;config.c: 282:             {
+{
+"283
+[; ;config.c: 283:                 IOCCN |= 0b01000000;
+[e =| _IOCCN -> -> 64 `i `Vuc ]
+"284
+[; ;config.c: 284:                 IOCCP &= 0b10111111;
+[e =& _IOCCP -> -> 191 `i `Vuc ]
+"285
+[; ;config.c: 285:                 TMR2 = 0;
+[e = _TMR2 -> -> 0 `i `uc ]
+"286
+[; ;config.c: 286:                 TMR2H = 0;
+[e = _TMR2H -> -> 0 `i `ui ]
+"287
+[; ;config.c: 287:                 T2CONbits.ON = 1;
+[e = . . _T2CONbits 0 2 -> -> 1 `i `uc ]
+"288
+[; ;config.c: 288:                 p.p4 = 1;
+[e = . _p 3 -> -> 1 `i `uc ]
+"289
+[; ;config.c: 289:             }
+}
+[e :U 1284 ]
+"290
+[; ;config.c: 290:         }
+}
+[e :U 1281 ]
+"291
+[; ;config.c: 291:         IOCCF = 0;
+[e = _IOCCF -> -> 0 `i `uc ]
+"292
+[; ;config.c: 292:         INTCONbits.IOCIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"293
+[; ;config.c: 293:     }
+}
+[e :U 1268 ]
+"294
+[; ;config.c: 294: }
+[e :UE 1265 ]
 }

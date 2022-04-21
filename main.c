@@ -15,7 +15,7 @@
  * 6:  RC4 CH2 RC   |   |   16: RC1
  * 7:  RC3 CH1 RC   |   |   17: RC2
  * 8:  RC6 CH4 RC   |   |   18: RB4 GYRO SDA
- * 9:  RC7          |   |   19: RB5
+ * 9:  RC7          |   |   19: RB5 DRONE BATTERY LECTURE
  * 10: RB7          |___|   20: RB6 GYRO SCLK
  */
 
@@ -27,10 +27,8 @@ signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
 //Variables previas
 struct previous p;
 //Cuatro esc con capacidad hasta 2000 unsigned 16 bits = 65535
-unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4;;
+unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
 unsigned char start;
-//Variable para el voltaje
-long voltaje;
 
 void main(void) { 
     // Inicialización de configuraciones iniciales del PIC
@@ -65,9 +63,14 @@ void main(void) {
         if(start == 3 && ch4 < 1050 && ch3 < 1050){
             start = 0;
             LATCbits.LATC7 = 0;
-        }   
+        }
+                
         // Se toman datos del sensor
-        read_sensor();  
+        read_sensor(); 
+        calculate_pid();
+        balance_drone();
+        battery_compensation();
+        
         // Se establece el valor de los ESC igual que el valor del ch3 para calibrar ESC's
         esc1 = esc2 = esc3 = esc4 = ch3;
         tmrLoop = (TMR0H << 8) | TMR0;
