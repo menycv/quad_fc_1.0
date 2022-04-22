@@ -27,22 +27,23 @@ signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
 //Variables previas
 struct previous p;
 //Cuatro esc con capacidad hasta 2000 unsigned 16 bits = 65535
-unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
+unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, \
+        ch3, ch4, voltage, setpoint;
 unsigned char start;
 
 void main(void) { 
     // Inicialización de configuraciones iniciales del PIC
     pic_init();
     gyro_config();          // Se enciende el giroscopio y se configura
+    
     //Inicialización de variables    
     start = 0;   
     LATCbits.LATC7 = 0;     // Pin C7 se apaga, es el LED indicador
-    ch3 = 1000;             // Se inicializa el channel 3 para evitar errores    
+    ch3 = 1000;             // Se inicializa el channel 3 para evitar errores 
+    // ch1 = ch2 = ch4 = 1500; // Channels 1, 2 and 4 are initialized to 1500
     while(1){
          // Se reinicia el contador del ciclo
-        TMR0H = 0;
-        TMR0 = 0;
-        TMR0H = 0;
+        reset_timer_loop();
         // Condiciones iniciales
         if(!start){
             //Inicialización de variables                           
@@ -56,22 +57,20 @@ void main(void) {
         // Condición que se debe cumplir para encender el dron
         if(start == 2 && ch4 < 1600 && ch3 < 1050){
             start = 3;
-            LATCbits.LATC7 = 1;
         }      
         // Combinación para apagar el dron, palanca izquierda hasta la izquierda
         // abajo y luego al centro
         if(start == 3 && ch4 < 1050 && ch3 < 1050){
             start = 0;
-            LATCbits.LATC7 = 0;
         }
                 
         // Se toman datos del sensor
         read_sensor(); 
+        // Se calcula el PID
         calculate_pid();
-        balance_drone();
-        battery_compensation();
-        
-        // Se establece el valor de los ESC igual que el valor del ch3 para calibrar ESC's
+        // Se envía las correcciones del PID a los ESC's
+        balance_drone();        
+        battery_compensation();        
         esc1 = esc2 = esc3 = esc4 = ch3;
         tmrLoop = (TMR0H << 8) | TMR0;
         // Para evitar que los motores piten mientras están apagados

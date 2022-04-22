@@ -16955,7 +16955,7 @@ extern __bank0 __bit __timeout;
 
 
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
-extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
+extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage, esc1, esc2, esc3, esc4;
 
 
 struct previous{
@@ -16977,6 +16977,7 @@ void i2c_restart(void);
 int i2c_read_byte(unsigned char);
 int nack(void);
 
+void reset_timer_loop(void);
 
 void pic_init(void);
 
@@ -17163,6 +17164,11 @@ void i2c_stop(){
     while(SSP1CON2bits.PEN);
     PIR1bits.SSP1IF = 0;
 }
+void reset_timer_loop(){
+    TMR0H = 0;
+    TMR0 = 0;
+    TMR0H = 0;
+}
 
 void calculate_pid(void){
 
@@ -17177,7 +17183,15 @@ void battery_compensation(){
     ADCON0bits.GO = 1;
     while(ADCON0bits.GO);
     PIR1bits.ADIF = 0;
+
+
+
+
     voltage = (unsigned)((ADRESH << 8) | ADRESL);
+
+    if(voltage < 810)
+        LATCbits.LATC7 = 1;
+
 
 }
 

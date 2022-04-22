@@ -16955,7 +16955,7 @@ extern __bank0 __bit __timeout;
 
 
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
-extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
+extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage, esc1, esc2, esc3, esc4;
 
 
 struct previous{
@@ -16977,6 +16977,7 @@ void i2c_restart(void);
 int i2c_read_byte(unsigned char);
 int nack(void);
 
+void reset_timer_loop(void);
 
 void pic_init(void);
 
@@ -17000,7 +17001,8 @@ signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
 
 struct previous p;
 
-unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
+unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage, setpoint;
+
 unsigned char start;
 
 void main(void) {
@@ -17008,14 +17010,14 @@ void main(void) {
     pic_init();
     gyro_config();
 
+
     start = 0;
     LATCbits.LATC7 = 0;
     ch3 = 1000;
+
     while(1){
 
-        TMR0H = 0;
-        TMR0 = 0;
-        TMR0H = 0;
+        reset_timer_loop();
 
         if(!start){
 
@@ -17029,22 +17031,20 @@ void main(void) {
 
         if(start == 2 && ch4 < 1600 && ch3 < 1050){
             start = 3;
-            LATCbits.LATC7 = 1;
         }
 
 
         if(start == 3 && ch4 < 1050 && ch3 < 1050){
             start = 0;
-            LATCbits.LATC7 = 0;
         }
 
 
         read_sensor();
+
         calculate_pid();
+
         balance_drone();
         battery_compensation();
-
-
         esc1 = esc2 = esc3 = esc4 = ch3;
         tmrLoop = (TMR0H << 8) | TMR0;
 

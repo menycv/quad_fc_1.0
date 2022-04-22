@@ -73,7 +73,7 @@
 //Variable externas
 //Un sensor con acc gyro y magnetometro 16 bits -32000 hasta 32000
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
-extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage;
+extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage, esc1, esc2, esc3, esc4;
 
 //Variables previas
 struct previous{
@@ -95,6 +95,7 @@ void i2c_restart(void);
 int i2c_read_byte(unsigned char);
 int nack(void);
 
+void reset_timer_loop(void);
 // Inicializar PIC
 void pic_init(void);
 //INTERRUPCIONES

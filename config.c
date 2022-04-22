@@ -169,6 +169,11 @@ void i2c_stop(){
     while(SSP1CON2bits.PEN);
     PIR1bits.SSP1IF = 0;
 }
+void reset_timer_loop(){
+    TMR0H = 0;
+    TMR0 = 0;
+    TMR0H = 0;
+}
 
 void calculate_pid(void){
     // TODO
@@ -183,9 +188,16 @@ void battery_compensation(){
     ADCON0bits.GO = 1;          // Habilitar lectura del convertidor analogo a digital
     while(ADCON0bits.GO);       // Esperar a que termine la lectura y conversión
     PIR1bits.ADIF = 0;          // Clearing interrupt bit for analog finish iterruption
-    // Assign value to variable voltage
+    // Assign value to variable voltage. Battery has 12.6 volts, it has a voltage
+    // divider with R1 = 3 kOhms and Rout = 2 kOhms to get 5 volts in pin B5
+    // 5 volts = 1024 in ADC
+    // Minimum allowed voltage in battery: 9.6 V ADC = 780 or 800 to be safe
     voltage = (unsigned)((ADRESH << 8) | ADRESL);
-    //TODO battery compensation
+    // Turn on LED if battery is low
+    if(voltage < 810)
+        LATCbits.LATC7 = 1;
+    
+    // Battery compensation
 }
 // Interrupts for reading the remote control
 void __interrupt() remote(){ 
