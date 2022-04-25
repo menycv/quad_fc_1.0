@@ -16956,18 +16956,20 @@ extern __bank0 __bit __timeout;
 
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
 extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage, esc1, esc2, esc3, esc4;
-
+extern unsigned char start;
 
 struct previous{
     unsigned p1 :1;
     unsigned p2 :1;
     unsigned p3 :1;
     unsigned p4 :1;
+    unsigned cal :1;
 };
 
 extern struct previous p;
 
 void gyro_config(void);
+void gyro_cal(void);
 void i2c_start(void);
 void i2c_write_byte(unsigned char);
 void i2c_stop(void);
@@ -16995,6 +16997,8 @@ void balance_drone(void);
 void battery_compensation(void);
 # 2 "config.c" 2
 
+
+long gyroX_cal, gyroY_cal, gyroZ_cal;
 
 
 void pic_init(void){
@@ -17065,6 +17069,7 @@ void gyro_config(){
     i2c_write(0x3C, 0, 0x18);
     i2c_write(0x3C, 1, 0x80);
     i2c_write(0x3C, 2, 0);
+    gyro_cal();
 }
 
 void read_sensor(){
@@ -17077,6 +17082,35 @@ void read_sensor(){
     magx = i2c_read(0x3C, 0x83);
     magy = i2c_read(0x3C, 0x85);
     magz = i2c_read(0x3C, 0x87);
+    if(p.cal){
+        gyrox -= gyroX_cal;
+        gyroy -= gyroY_cal;
+        gyroz -= gyroZ_cal;
+    }
+}
+
+void gyro_cal(){
+    gyroX_cal = 0;
+    gyroY_cal = 0;
+    gyroZ_cal = 0;
+    p.cal = 0;
+    for(int x = 0; x < 1100; x++){
+        read_sensor();
+        reset_timer_loop();
+        if(x > 100){
+            gyroX_cal += gyrox;
+            gyroY_cal += gyroy;
+            gyroZ_cal += gyroz;
+        }
+        if(x % 50 == 0)
+            LATCbits.LATC7 = ~LATCbits.LATC7;
+
+        while(TMR0H < 0x2A);
+    }
+    gyroX_cal /= 1000;
+    gyroY_cal /= 1000;
+    gyroZ_cal /= 1000;
+    p.cal = 1;
 }
 
 void i2c_write(unsigned char address, unsigned char subaddress, unsigned char data){

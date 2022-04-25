@@ -1,15 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "79 ./config.h
 [; ;./config.h: 79: struct previous{
-[s S1216 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1216 previous p1 p2 p3 p4 ]
+[s S1216 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1216 previous p1 p2 p3 p4 cal ]
 [p mainexit ]
-"100
-[; ;./config.h: 100: void pic_init(void);
+"102
+[; ;./config.h: 102: void pic_init(void);
 [v _pic_init `(v ~T0 @X0 0 ef ]
-"88
-[; ;./config.h: 88: void gyro_config(void);
-[v _gyro_config `(v ~T0 @X0 0 ef ]
 "2726 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2726:     struct {
 [s S141 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -21,20 +18,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2737
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 2737: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
 [v _LATCbits `VS140 ~T0 @X0 0 e@270 ]
-"98 ./config.h
-[; ;./config.h: 98: void reset_timer_loop(void);
+"89 ./config.h
+[; ;./config.h: 89: void gyro_config(void);
+[v _gyro_config `(v ~T0 @X0 0 ef ]
+"100
+[; ;./config.h: 100: void reset_timer_loop(void);
 [v _reset_timer_loop `(v ~T0 @X0 0 ef ]
-"107
-[; ;./config.h: 107: void read_sensor(void);
+"109
+[; ;./config.h: 109: void read_sensor(void);
 [v _read_sensor `(v ~T0 @X0 0 ef ]
-"105
-[; ;./config.h: 105: void calculate_pid(void);
+"107
+[; ;./config.h: 107: void calculate_pid(void);
 [v _calculate_pid `(v ~T0 @X0 0 ef ]
-"110
-[; ;./config.h: 110: void balance_drone(void);
+"112
+[; ;./config.h: 112: void balance_drone(void);
 [v _balance_drone `(v ~T0 @X0 0 ef ]
-"113
-[; ;./config.h: 113: void battery_compensation(void);
+"115
+[; ;./config.h: 115: void battery_compensation(void);
 [v _battery_compensation `(v ~T0 @X0 0 ef ]
 "868 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h: 868: extern volatile unsigned char TMR0 __attribute__((address(0x015)));
@@ -1454,195 +1454,195 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [; ;main.c: 36:     pic_init();
 [e ( _pic_init ..  ]
-"37
-[; ;main.c: 37:     gyro_config();
-[e ( _gyro_config ..  ]
-"40
-[; ;main.c: 40:     start = 0;
+"39
+[; ;main.c: 39:     start = 0;
 [e = _start -> -> 0 `i `uc ]
-"41
-[; ;main.c: 41:     LATCbits.LATC7 = 0;
+"40
+[; ;main.c: 40:     LATCbits.LATC7 = 0;
 [e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-"42
-[; ;main.c: 42:     ch3 = 1000;
+"41
+[; ;main.c: 41:     ch3 = 1000;
 [e = _ch3 -> -> 1000 `i `ui ]
-"44
-[; ;main.c: 44:     while(1){
+"43
+[; ;main.c: 43:     gyro_config();
+[e ( _gyro_config ..  ]
+"46
+[; ;main.c: 46:     while(1){
 [e :U 1219 ]
 {
-"46
-[; ;main.c: 46:         reset_timer_loop();
-[e ( _reset_timer_loop ..  ]
 "48
-[; ;main.c: 48:         if(!start){
+[; ;main.c: 48:         reset_timer_loop();
+[e ( _reset_timer_loop ..  ]
+"50
+[; ;main.c: 50:         if(!start){
 [e $ ! ! != -> _start `i -> 0 `i 1221  ]
 {
-"50
-[; ;main.c: 50:             esc1 = esc2 = esc3 = esc4 = 1000;
-[e = _esc1 = _esc2 = _esc3 = _esc4 -> -> 1000 `i `ui ]
-"51
-[; ;main.c: 51:             p.p1 = p.p2 = p.p3 = p.p4 = 0;
-[e = . _p 0 = . _p 1 = . _p 2 = . _p 3 -> -> 0 `i `uc ]
 "52
-[; ;main.c: 52:             start = 1;
-[e = _start -> -> 1 `i `uc ]
+[; ;main.c: 52:             esc1 = esc2 = esc3 = esc4 = 1000;
+[e = _esc1 = _esc2 = _esc3 = _esc4 -> -> 1000 `i `ui ]
 "53
-[; ;main.c: 53:         }
+[; ;main.c: 53:             p.p1 = p.p2 = p.p3 = p.p4 = 0;
+[e = . _p 0 = . _p 1 = . _p 2 = . _p 3 -> -> 0 `i `uc ]
+"54
+[; ;main.c: 54:             start = 1;
+[e = _start -> -> 1 `i `uc ]
+"55
+[; ;main.c: 55:         }
 }
 [e :U 1221 ]
-"54
-[; ;main.c: 54:         if(start == 1 && ch4 > 1900 && ch3 < 1050){
+"56
+[; ;main.c: 56:         if(start == 1 && ch4 > 1900 && ch3 < 1050){
 [e $ ! && && == -> _start `i -> 1 `i > _ch4 -> -> 1900 `i `ui < _ch3 -> -> 1050 `i `ui 1222  ]
 {
-"55
-[; ;main.c: 55:             start = 2;
+"57
+[; ;main.c: 57:             start = 2;
 [e = _start -> -> 2 `i `uc ]
-"56
-[; ;main.c: 56:         }
+"58
+[; ;main.c: 58:         }
 }
 [e :U 1222 ]
-"58
-[; ;main.c: 58:         if(start == 2 && ch4 < 1600 && ch3 < 1050){
+"60
+[; ;main.c: 60:         if(start == 2 && ch4 < 1600 && ch3 < 1050){
 [e $ ! && && == -> _start `i -> 2 `i < _ch4 -> -> 1600 `i `ui < _ch3 -> -> 1050 `i `ui 1223  ]
 {
-"59
-[; ;main.c: 59:             start = 3;
+"61
+[; ;main.c: 61:             start = 3;
 [e = _start -> -> 3 `i `uc ]
-"60
-[; ;main.c: 60:         }
+"62
+[; ;main.c: 62:         }
 }
 [e :U 1223 ]
-"63
-[; ;main.c: 63:         if(start == 3 && ch4 < 1050 && ch3 < 1050){
+"65
+[; ;main.c: 65:         if(start == 3 && ch4 < 1050 && ch3 < 1050){
 [e $ ! && && == -> _start `i -> 3 `i < _ch4 -> -> 1050 `i `ui < _ch3 -> -> 1050 `i `ui 1224  ]
 {
-"64
-[; ;main.c: 64:             start = 0;
+"66
+[; ;main.c: 66:             start = 0;
 [e = _start -> -> 0 `i `uc ]
-"65
-[; ;main.c: 65:         }
+"67
+[; ;main.c: 67:         }
 }
 [e :U 1224 ]
-"68
-[; ;main.c: 68:         read_sensor();
-[e ( _read_sensor ..  ]
 "70
-[; ;main.c: 70:         calculate_pid();
-[e ( _calculate_pid ..  ]
+[; ;main.c: 70:         read_sensor();
+[e ( _read_sensor ..  ]
 "72
-[; ;main.c: 72:         balance_drone();
-[e ( _balance_drone ..  ]
-"73
-[; ;main.c: 73:         battery_compensation();
-[e ( _battery_compensation ..  ]
+[; ;main.c: 72:         calculate_pid();
+[e ( _calculate_pid ..  ]
 "74
-[; ;main.c: 74:         esc1 = esc2 = esc3 = esc4 = ch3;
-[e = _esc1 = _esc2 = _esc3 = _esc4 _ch3 ]
+[; ;main.c: 74:         balance_drone();
+[e ( _balance_drone ..  ]
 "75
-[; ;main.c: 75:         tmrLoop = (TMR0H << 8) | TMR0;
-[e = _tmrLoop | << _TMR0H -> 8 `i -> _TMR0 `ui ]
+[; ;main.c: 75:         battery_compensation();
+[e ( _battery_compensation ..  ]
+"76
+[; ;main.c: 76:         esc1 = esc2 = esc3 = esc4 = ch3;
+[e = _esc1 = _esc2 = _esc3 = _esc4 _ch3 ]
 "77
-[; ;main.c: 77:         if(start < 3){
+[; ;main.c: 77:         tmrLoop = (TMR0H << 8) | TMR0;
+[e = _tmrLoop | << _TMR0H -> 8 `i -> _TMR0 `ui ]
+"79
+[; ;main.c: 79:         if(start < 3){
 [e $ ! < -> _start `i -> 3 `i 1225  ]
 {
-"78
-[; ;main.c: 78:             PORTA |= 0b00010111;
+"80
+[; ;main.c: 80:             PORTA |= 0b00010111;
 [e =| _PORTA -> -> 23 `i `Vuc ]
-"79
-[; ;main.c: 79:             while((((TMR0H << 8) | TMR0) - tmrLoop) < 1000 || TMR0 < 0xE8);
+"81
+[; ;main.c: 81:             while((((TMR0H << 8) | TMR0) - tmrLoop) < 1000 || TMR0 < 0xE8);
 [e $U 1226  ]
 [e :U 1227 ]
 [e :U 1226 ]
 [e $ || < - | << _TMR0H -> 8 `i -> _TMR0 `ui _tmrLoop -> -> 1000 `i `ui < -> _TMR0 `i -> 232 `i 1227  ]
 [e :U 1228 ]
-"80
-[; ;main.c: 80:             PORTA &= 0b11101000;
+"82
+[; ;main.c: 82:             PORTA &= 0b11101000;
 [e =& _PORTA -> -> 232 `i `Vuc ]
-"81
-[; ;main.c: 81:         }
+"83
+[; ;main.c: 83:         }
 }
 [e $U 1229  ]
-"83
-[; ;main.c: 83:         else{
+"85
+[; ;main.c: 85:         else{
 [e :U 1225 ]
 {
-"84
-[; ;main.c: 84:             if(esc1 < 1200)esc1 = 1200;
+"86
+[; ;main.c: 86:             if(esc1 < 1200)esc1 = 1200;
 [e $ ! < _esc1 -> -> 1200 `i `ui 1230  ]
 [e = _esc1 -> -> 1200 `i `ui ]
 [e :U 1230 ]
-"85
-[; ;main.c: 85:             if(esc2 < 1200)esc2 = 1200;
+"87
+[; ;main.c: 87:             if(esc2 < 1200)esc2 = 1200;
 [e $ ! < _esc2 -> -> 1200 `i `ui 1231  ]
 [e = _esc2 -> -> 1200 `i `ui ]
 [e :U 1231 ]
-"86
-[; ;main.c: 86:             if(esc3 < 1200)esc3 = 1200;
+"88
+[; ;main.c: 88:             if(esc3 < 1200)esc3 = 1200;
 [e $ ! < _esc3 -> -> 1200 `i `ui 1232  ]
 [e = _esc3 -> -> 1200 `i `ui ]
 [e :U 1232 ]
-"87
-[; ;main.c: 87:             if(esc4 < 1200)esc4 = 1200;
+"89
+[; ;main.c: 89:             if(esc4 < 1200)esc4 = 1200;
 [e $ ! < _esc4 -> -> 1200 `i `ui 1233  ]
 [e = _esc4 -> -> 1200 `i `ui ]
 [e :U 1233 ]
-"88
-[; ;main.c: 88:             PORTA |= 0b00010111;
+"90
+[; ;main.c: 90:             PORTA |= 0b00010111;
 [e =| _PORTA -> -> 23 `i `Vuc ]
-"89
-[; ;main.c: 89:             while((PORTA & 0b00010111) > 0){
+"91
+[; ;main.c: 91:             while((PORTA & 0b00010111) > 0){
 [e $U 1234  ]
 [e :U 1235 ]
 {
-"90
-[; ;main.c: 90:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc1)PORTA &= 0b11111110;
+"92
+[; ;main.c: 92:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc1)PORTA &= 0b11111110;
 [e $ ! > - | << _TMR0H -> 8 `i -> _TMR0 `ui _tmrLoop _esc1 1237  ]
 [e =& _PORTA -> -> 254 `i `Vuc ]
 [e :U 1237 ]
-"91
-[; ;main.c: 91:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc2)PORTA &= 0b11111101;
+"93
+[; ;main.c: 93:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc2)PORTA &= 0b11111101;
 [e $ ! > - | << _TMR0H -> 8 `i -> _TMR0 `ui _tmrLoop _esc2 1238  ]
 [e =& _PORTA -> -> 253 `i `Vuc ]
 [e :U 1238 ]
-"92
-[; ;main.c: 92:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc3)PORTA &= 0b11111011;
+"94
+[; ;main.c: 94:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc3)PORTA &= 0b11111011;
 [e $ ! > - | << _TMR0H -> 8 `i -> _TMR0 `ui _tmrLoop _esc3 1239  ]
 [e =& _PORTA -> -> 251 `i `Vuc ]
 [e :U 1239 ]
-"93
-[; ;main.c: 93:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11101111;
+"95
+[; ;main.c: 95:                 if((((TMR0H << 8) | TMR0) - tmrLoop) > esc4)PORTA &= 0b11101111;
 [e $ ! > - | << _TMR0H -> 8 `i -> _TMR0 `ui _tmrLoop _esc4 1240  ]
 [e =& _PORTA -> -> 239 `i `Vuc ]
 [e :U 1240 ]
-"94
-[; ;main.c: 94:             }
+"96
+[; ;main.c: 96:             }
 }
 [e :U 1234 ]
-"89
-[; ;main.c: 89:             while((PORTA & 0b00010111) > 0){
+"91
+[; ;main.c: 91:             while((PORTA & 0b00010111) > 0){
 [e $ > & -> _PORTA `i -> 23 `i -> 0 `i 1235  ]
 [e :U 1236 ]
-"95
-[; ;main.c: 95:         }
+"97
+[; ;main.c: 97:         }
 }
 [e :U 1229 ]
-"96
-[; ;main.c: 96:         while(TMR0H < 0x4E || TMR0 < 20);
+"98
+[; ;main.c: 98:         while(TMR0H < 0x4E || TMR0 < 20);
 [e $U 1241  ]
 [e :U 1242 ]
 [e :U 1241 ]
 [e $ || < _TMR0H -> -> 78 `i `ui < -> _TMR0 `i -> 20 `i 1242  ]
 [e :U 1243 ]
-"97
-[; ;main.c: 97:     }
+"99
+[; ;main.c: 99:     }
 }
 [e :U 1218 ]
 [e $U 1219  ]
 [e :U 1220 ]
-"98
-[; ;main.c: 98:     __asm("sleep");
+"100
+[; ;main.c: 100:     __asm("sleep");
 [; <" sleep ;# ">
-"99
-[; ;main.c: 99: }
+"101
+[; ;main.c: 101: }
 [e :UE 1217 ]
 }

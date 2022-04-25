@@ -1,6 +1,8 @@
 // Functions implementation of config file
 #include "config.h"
 
+long gyroX_cal, gyroY_cal, gyroZ_cal;
+
 // Inicialización de PIC
 void pic_init(void){
     //Configuraciones iniciales
@@ -63,13 +65,14 @@ void pic_init(void){
     ADCON1bits.ADFM = 1;            // Right justified 3 bits of ADRESH and 8 bits of ADRESL
 }
 void gyro_config(){
-    i2c_write(GYRO, CTRL1, 0x0F);   //Gyro powerup
+    i2c_write(GYRO, CTRL1, 0x0F);   // Gyro powerup ODR 95 HZ Bandwidth 12.5 cut-off
     i2c_write(GYRO, CTRL4, 0x90);   //Full Scale 500dps | Block data update
     i2c_write(ACCE, CTRL1, 0x57);   //ODR 100HZ   0b0101 0111 
     i2c_write(ACCE, CTRL4, 0x90);   //BDU 0b1001 0000
     i2c_write(MAG, 0, 0x18);        //0b0001 1000
     i2c_write(MAG, 1, 0x80);        //0b0001 1000 75 hz ODR
     i2c_write(MAG, 2, 0);           //0b0001 1000 75 hz ODR
+    gyro_cal();
 }
 
 void read_sensor(){
@@ -82,6 +85,35 @@ void read_sensor(){
     magx = i2c_read(MAG, 0x83);
     magy = i2c_read(MAG, 0x85);
     magz = i2c_read(MAG, 0x87);
+    if(p.cal){
+        gyrox -= gyroX_cal;
+        gyroy -= gyroY_cal;
+        gyroz -= gyroZ_cal;
+    }
+}
+
+void gyro_cal(){    
+    gyroX_cal = 0;
+    gyroY_cal = 0;
+    gyroZ_cal = 0;
+    p.cal = 0;
+    for(int x = 0; x < 1100; x++){        
+        read_sensor();
+        reset_timer_loop(); 
+        if(x > 100){
+            gyroX_cal += gyrox;
+            gyroY_cal += gyroy;
+            gyroZ_cal += gyroz;
+        }
+        if(x % 50 == 0)
+            LATCbits.LATC7 = ~LATCbits.LATC7;       
+        
+        while(TMR0H < 0x2A);
+    }
+    gyroX_cal /= 1000;
+    gyroY_cal /= 1000;
+    gyroZ_cal /= 1000;
+    p.cal = 1;
 }
 
 void i2c_write(unsigned char address, unsigned char subaddress, unsigned char data){    

@@ -31,15 +31,17 @@ unsigned esc1, esc2, esc3, esc4, count, TMR2H, count, TMR0H, tmrLoop, ch1, ch2, 
         ch3, ch4, voltage, setpoint;
 unsigned char start;
 
-void main(void) { 
+void main(void) {     
     // Inicialización de configuraciones iniciales del PIC
     pic_init();
-    gyro_config();          // Se enciende el giroscopio y se configura
     
     //Inicialización de variables    
     start = 0;   
     LATCbits.LATC7 = 0;     // Pin C7 se apaga, es el LED indicador
     ch3 = 1000;             // Se inicializa el channel 3 para evitar errores 
+    
+    gyro_config();          // Se enciende el giroscopio y se configura
+        
     // ch1 = ch2 = ch4 = 1500; // Channels 1, 2 and 4 are initialized to 1500
     while(1){
          // Se reinicia el contador del ciclo

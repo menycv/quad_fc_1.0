@@ -3,45 +3,51 @@
 [d edition pro ]
 [d chip 16F1619 ]
 [d frameptr 6 ]
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"5 C:\Users\mplab\MPLABXProjects\dron.X\config.c
+"7 C:\Users\mplab\MPLABXProjects\dron.X\config.c
 [v _pic_init pic_init `(v  1 e 1 0 ]
-"65
+"67
 [v _gyro_config gyro_config `(v  1 e 1 0 ]
-"75
+"78
 [v _read_sensor read_sensor `(v  1 e 1 0 ]
-"87
+"95
+[v _gyro_cal gyro_cal `(v  1 e 1 0 ]
+"119
 [v _i2c_write i2c_write `(v  1 e 1 0 ]
-"101
+"133
 [v _i2c_read i2c_read `(i  1 e 2 0 ]
-"124
+"156
 [v _i2c_read_byte i2c_read_byte `(i  1 e 2 0 ]
-"138
+"170
 [v _nack nack `(i  1 e 2 0 ]
-"146
-[v _i2c_start i2c_start `(v  1 e 1 0 ]
-"152
-[v _i2c_restart i2c_restart `(v  1 e 1 0 ]
-"158
-[v _i2c_write_byte i2c_write_byte `(v  1 e 1 0 ]
-"167
-[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
-"172
-[v _reset_timer_loop reset_timer_loop `(v  1 e 1 0 ]
 "178
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+"184
+[v _i2c_restart i2c_restart `(v  1 e 1 0 ]
+"190
+[v _i2c_write_byte i2c_write_byte `(v  1 e 1 0 ]
+"199
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+"204
+[v _reset_timer_loop reset_timer_loop `(v  1 e 1 0 ]
+"210
 [v _calculate_pid calculate_pid `(v  1 e 1 0 ]
-"182
+"214
 [v _balance_drone balance_drone `(v  1 e 1 0 ]
-"186
+"218
 [v _battery_compensation battery_compensation `(v  1 e 1 0 ]
-"203
+"235
 [v _remote remote `II(v  1 e 1 0 ]
 "34 C:\Users\mplab\MPLABXProjects\dron.X\main.c
 [v _main main `(v  1 e 1 0 ]
-[s S170 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S172 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -51,16 +57,16 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1619.h
-[s S179 . 1 `uc 1 . 1 0 :2:0 
+[s S181 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S184 . 1 `S170 1 . 1 0 `S179 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES184  1 e 1 @11 ]
+[u S186 . 1 `S172 1 . 1 0 `S181 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES186  1 e 1 @11 ]
 "429
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
-[s S640 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S667 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -70,13 +76,13 @@
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "597
-[u S649 . 1 `S640 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES649  1 e 1 @16 ]
+[u S676 . 1 `S667 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES676  1 e 1 @16 ]
 "868
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
 "888
 [v _TMR1 TMR1 `VEus  1 e 2 @22 ]
-[s S256 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S258 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -84,22 +90,22 @@
 `uc 1 TMR1CS 1 0 :2:6 
 ]
 "957
-[s S263 . 1 `uc 1 . 1 0 :4:0 
+[s S265 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[u S269 . 1 `S256 1 . 1 0 `S263 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES269  1 e 1 @24 ]
+[u S271 . 1 `S258 1 . 1 0 `S265 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES271  1 e 1 @24 ]
 "1077
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
-[s S347 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S349 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
 "1216
-[s S351 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S353 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
@@ -107,11 +113,11 @@
 `uc 1 CKPS1 1 0 :1:5 
 `uc 1 CKPS2 1 0 :1:6 
 ]
-[s S359 . 1 `uc 1 T2OUTPS 1 0 :4:0 
+[s S361 . 1 `uc 1 T2OUTPS 1 0 :4:0 
 `uc 1 T2CKPS 1 0 :3:4 
 `uc 1 T2ON 1 0 :1:7 
 ]
-[s S363 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
+[s S365 . 1 `uc 1 T2OUTPS0 1 0 :1:0 
 `uc 1 T2OUTPS1 1 0 :1:1 
 `uc 1 T2OUTPS2 1 0 :1:2 
 `uc 1 T2OUTPS3 1 0 :1:3 
@@ -120,33 +126,33 @@
 `uc 1 T2CKPS2 1 0 :1:6 
 `uc 1 TMR2ON 1 0 :1:7 
 ]
-[u S372 . 1 `S347 1 . 1 0 `S351 1 . 1 0 `S359 1 . 1 0 `S363 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES372  1 e 1 @28 ]
-[s S403 . 1 `uc 1 MODE 1 0 :5:0 
+[u S374 . 1 `S349 1 . 1 0 `S353 1 . 1 0 `S361 1 . 1 0 `S365 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES374  1 e 1 @28 ]
+[s S405 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
 "1359
-[s S408 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S410 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 `uc 1 MODE4 1 0 :1:4 
 ]
-[s S414 . 1 `uc 1 T2MODE 1 0 :5:0 
+[s S416 . 1 `uc 1 T2MODE 1 0 :5:0 
 `uc 1 T2CKSYNC 1 0 :1:5 
 `uc 1 T2CKPOL 1 0 :1:6 
 `uc 1 T2PSYNC 1 0 :1:7 
 ]
-[s S419 . 1 `uc 1 T2MODE0 1 0 :1:0 
+[s S421 . 1 `uc 1 T2MODE0 1 0 :1:0 
 `uc 1 T2MODE1 1 0 :1:1 
 `uc 1 T2MODE2 1 0 :1:2 
 `uc 1 T2MODE3 1 0 :1:3 
 `uc 1 T2MODE4 1 0 :1:4 
 ]
-[u S425 . 1 `S403 1 . 1 0 `S408 1 . 1 0 `S414 1 . 1 0 `S419 1 . 1 0 ]
-[v _T2HLTbits T2HLTbits `VES425  1 e 1 @29 ]
+[u S427 . 1 `S405 1 . 1 0 `S410 1 . 1 0 `S416 1 . 1 0 `S421 1 . 1 0 ]
+[v _T2HLTbits T2HLTbits `VES427  1 e 1 @29 ]
 "1454
 [v _T2CLKCON T2CLKCON `VEuc  1 e 1 @30 ]
 "1534
@@ -157,7 +163,7 @@
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1703
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S202 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S204 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -167,9 +173,9 @@
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1782
-[u S211 . 1 `S202 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES211  1 e 1 @144 ]
-[s S224 . 1 `uc 1 PS 1 0 :3:0 
+[u S213 . 1 `S204 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES213  1 e 1 @144 ]
+[s S226 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -177,22 +183,22 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "2076
-[s S231 . 1 `uc 1 PS0 1 0 :1:0 
+[s S233 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S238 . 1 `S224 1 . 1 0 `S231 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES238  1 e 1 @149 ]
-[s S121 . 1 `uc 1 SCS 1 0 :2:0 
+[u S240 . 1 `S226 1 . 1 0 `S233 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES240  1 e 1 @149 ]
+[s S123 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF 1 0 :4:3 
 `uc 1 SPLLEN 1 0 :1:7 
 ]
 "2278
-[s S126 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S128 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 IRCF0 1 0 :1:3 
@@ -200,9 +206,9 @@
 `uc 1 IRCF2 1 0 :1:5 
 `uc 1 IRCF3 1 0 :1:6 
 ]
-[u S134 . 1 `S121 1 . 1 0 `S126 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES134  1 e 1 @153 ]
-[s S151 . 1 `uc 1 HFIOFS 1 0 :1:0 
+[u S136 . 1 `S123 1 . 1 0 `S128 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES136  1 e 1 @153 ]
+[s S153 . 1 `uc 1 HFIOFS 1 0 :1:0 
 `uc 1 LFIOFR 1 0 :1:1 
 `uc 1 MFIOFR 1 0 :1:2 
 `uc 1 HFIOFL 1 0 :1:3 
@@ -211,18 +217,18 @@
 `uc 1 PLLR 1 0 :1:6 
 ]
 "2344
-[u S159 . 1 `S151 1 . 1 0 ]
-[v _OSCSTATbits OSCSTATbits `VES159  1 e 1 @154 ]
+[u S161 . 1 `S153 1 . 1 0 ]
+[v _OSCSTATbits OSCSTATbits `VES161  1 e 1 @154 ]
 "2391
 [v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
 "2411
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
-[s S506 . 1 `uc 1 ADON 1 0 :1:0 
+[s S508 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "2456
-[s S510 . 1 `uc 1 . 1 0 :1:0 
+[s S512 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -230,27 +236,27 @@
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S518 . 1 `uc 1 . 1 0 :1:0 
+[s S520 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S521 . 1 `S506 1 . 1 0 `S510 1 . 1 0 `S518 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES521  1 e 1 @157 ]
-[s S541 . 1 `uc 1 ADPREF 1 0 :2:0 
+[u S523 . 1 `S508 1 . 1 0 `S512 1 . 1 0 `S520 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES523  1 e 1 @157 ]
+[s S543 . 1 `uc 1 ADPREF 1 0 :2:0 
 `uc 1 . 1 0 :2:2 
 `uc 1 ADCS 1 0 :3:4 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2532
-[s S546 . 1 `uc 1 ADPREF0 1 0 :1:0 
+[s S548 . 1 `uc 1 ADPREF0 1 0 :1:0 
 `uc 1 ADPREF1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 ADCS0 1 0 :1:4 
 `uc 1 ADCS1 1 0 :1:5 
 `uc 1 ADCS2 1 0 :1:6 
 ]
-[u S553 . 1 `S541 1 . 1 0 `S546 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES553  1 e 1 @158 ]
-[s S35 . 1 `uc 1 LATC0 1 0 :1:0 
+[u S555 . 1 `S543 1 . 1 0 `S548 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES555  1 e 1 @158 ]
+[s S32 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -260,8 +266,8 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2737
-[u S44 . 1 `S35 1 . 1 0 ]
-[v _LATCbits LATCbits `VES44  1 e 1 @270 ]
+[u S41 . 1 `S32 1 . 1 0 ]
+[v _LATCbits LATCbits `VES41  1 e 1 @270 ]
 "3331
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "3378
@@ -272,7 +278,7 @@
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
 "4946
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
-[s S682 . 1 `uc 1 BF 1 0 :1:0 
+[s S709 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -282,25 +288,25 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "5476
-[u S691 . 1 `S682 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES691  1 e 1 @532 ]
-[s S454 . 1 `uc 1 SSPM 1 0 :4:0 
+[u S718 . 1 `S709 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES718  1 e 1 @532 ]
+[s S456 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5609
-[s S460 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S462 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S465 . 1 `S454 1 . 1 0 `S460 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES465  1 e 1 @533 ]
+[u S467 . 1 `S456 1 . 1 0 `S462 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES467  1 e 1 @533 ]
 "5796
-[v _SSP1CONbits SSP1CONbits `VES465  1 e 1 @533 ]
-[s S617 . 1 `uc 1 SEN 1 0 :1:0 
+[v _SSP1CONbits SSP1CONbits `VES467  1 e 1 @533 ]
+[s S644 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -310,26 +316,26 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "5868
-[u S626 . 1 `S617 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES626  1 e 1 @534 ]
+[u S653 . 1 `S644 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES653  1 e 1 @534 ]
 "5923
-[v _SSPCON2bits SSPCON2bits `VES626  1 e 1 @534 ]
-[s S490 . 1 `uc 1 . 1 0 :4:0 
+[v _SSPCON2bits SSPCON2bits `VES653  1 e 1 @534 ]
+[s S492 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 ODB4 1 0 :1:4 
 `uc 1 ODB5 1 0 :1:5 
 `uc 1 ODB6 1 0 :1:6 
 `uc 1 ODB7 1 0 :1:7 
 ]
 "6149
-[u S496 . 1 `S490 1 . 1 0 ]
-[v _ODCONBbits ODCONBbits `VES496  1 e 1 @653 ]
+[u S498 . 1 `S492 1 . 1 0 ]
+[v _ODCONBbits ODCONBbits `VES498  1 e 1 @653 ]
 "7396
 [v _IOCCP IOCCP `VEuc  1 e 1 @919 ]
 "7458
 [v _IOCCN IOCCN `VEuc  1 e 1 @920 ]
 "7520
 [v _IOCCF IOCCF `VEuc  1 e 1 @921 ]
-[s S747 . 1 `uc 1 IOCCF0 1 0 :1:0 
+[s S761 . 1 `uc 1 IOCCF0 1 0 :1:0 
 `uc 1 IOCCF1 1 0 :1:1 
 `uc 1 IOCCF2 1 0 :1:2 
 `uc 1 IOCCF3 1 0 :1:3 
@@ -339,13 +345,13 @@
 `uc 1 IOCCF7 1 0 :1:7 
 ]
 "7537
-[u S756 . 1 `S747 1 . 1 0 ]
-[v _IOCCFbits IOCCFbits `VES756  1 e 1 @921 ]
+[u S770 . 1 `S761 1 . 1 0 ]
+[v _IOCCFbits IOCCFbits `VES770  1 e 1 @921 ]
 "8693
 [v _TMR3L TMR3L `VEuc  1 e 1 @1171 ]
 "8713
 [v _TMR3H TMR3H `VEuc  1 e 1 @1172 ]
-[s S286 . 1 `uc 1 TMR3ON 1 0 :1:0 
+[s S288 . 1 `uc 1 TMR3ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 T3SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -353,19 +359,19 @@
 `uc 1 TMR3CS 1 0 :2:6 
 ]
 "8755
-[s S293 . 1 `uc 1 . 1 0 :4:0 
+[s S295 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T3CKPS0 1 0 :1:4 
 `uc 1 T3CKPS1 1 0 :1:5 
 `uc 1 TMR3CS0 1 0 :1:6 
 `uc 1 TMR3CS1 1 0 :1:7 
 ]
-[u S299 . 1 `S286 1 . 1 0 `S293 1 . 1 0 ]
-[v _T3CONbits T3CONbits `VES299  1 e 1 @1173 ]
+[u S301 . 1 `S288 1 . 1 0 `S295 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES301  1 e 1 @1173 ]
 "8870
 [v _TMR5L TMR5L `VEuc  1 e 1 @1178 ]
 "8890
 [v _TMR5H TMR5H `VEuc  1 e 1 @1179 ]
-[s S316 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S318 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 T5SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -373,14 +379,14 @@
 `uc 1 TMR5CS 1 0 :2:6 
 ]
 "8932
-[s S323 . 1 `uc 1 . 1 0 :4:0 
+[s S325 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T5CKPS0 1 0 :1:4 
 `uc 1 T5CKPS1 1 0 :1:5 
 `uc 1 TMR5CS0 1 0 :1:6 
 `uc 1 TMR5CS1 1 0 :1:7 
 ]
-[u S329 . 1 `S316 1 . 1 0 `S323 1 . 1 0 ]
-[v _T5CONbits T5CONbits `VES329  1 e 1 @1180 ]
+[u S331 . 1 `S318 1 . 1 0 `S325 1 . 1 0 ]
+[v _T5CONbits T5CONbits `VES331  1 e 1 @1180 ]
 "21983
 [v _SSPCLKPPS SSPCLKPPS `VEuc  1 e 1 @3616 ]
 "22027
@@ -392,6 +398,10 @@
 "32869
 "32869
 [v _RCEN RCEN `VEb  1 e 0 @4275 ]
+"4 C:\Users\mplab\MPLABXProjects\dron.X\config.c
+[v _gyroX_cal gyroX_cal `l  1 e 4 0 ]
+[v _gyroY_cal gyroY_cal `l  1 e 4 0 ]
+[v _gyroZ_cal gyroZ_cal `l  1 e 4 0 ]
 "25 C:\Users\mplab\MPLABXProjects\dron.X\main.c
 [v _accx accx `i  1 e 2 0 ]
 [v _accy accy `i  1 e 2 0 ]
@@ -406,6 +416,7 @@
 `uc 1 p2 1 0 :1:1 
 `uc 1 p3 1 0 :1:2 
 `uc 1 p4 1 0 :1:3 
+`uc 1 cal 1 0 :1:4 
 ]
 "28
 [v _p p `S22  1 e 1 0 ]
@@ -428,60 +439,19 @@
 "34
 [v _main main `(v  1 e 1 0 ]
 {
-"99
-} 0
-"172 C:\Users\mplab\MPLABXProjects\dron.X\config.c
-[v _reset_timer_loop reset_timer_loop `(v  1 e 1 0 ]
-{
-"176
-} 0
-"75
-[v _read_sensor read_sensor `(v  1 e 1 0 ]
-{
-"85
-} 0
 "101
-[v _i2c_read i2c_read `(i  1 e 2 0 ]
-{
-[v i2c_read@address address `uc  1 a 1 wreg ]
-"102
-[v i2c_read@high high `i  1 a 2 14 ]
-[v i2c_read@low low `i  1 a 2 12 ]
-"101
-[v i2c_read@address address `uc  1 a 1 wreg ]
-[v i2c_read@subaddress subaddress `uc  1 p 1 7 ]
-"103
-[v i2c_read@address address `uc  1 a 1 16 ]
-"122
 } 0
-"152
-[v _i2c_restart i2c_restart `(v  1 e 1 0 ]
-{
-"156
-} 0
-"124
-[v _i2c_read_byte i2c_read_byte `(i  1 e 2 0 ]
-{
-[v i2c_read_byte@ack ack `uc  1 a 1 wreg ]
-"125
-[v i2c_read_byte@temp temp `i  1 a 2 5 ]
-"124
-[v i2c_read_byte@ack ack `uc  1 a 1 wreg ]
-"126
-[v i2c_read_byte@ack ack `uc  1 a 1 4 ]
-"136
-} 0
-"5
+"7 C:\Users\mplab\MPLABXProjects\dron.X\config.c
 [v _pic_init pic_init `(v  1 e 1 0 ]
 {
-"64
+"66
 } 0
-"65
+"67
 [v _gyro_config gyro_config `(v  1 e 1 0 ]
 {
-"73
+"76
 } 0
-"87
+"119
 [v _i2c_write i2c_write `(v  1 e 1 0 ]
 {
 [v i2c_write@address address `uc  1 a 1 wreg ]
@@ -489,48 +459,120 @@
 [v i2c_write@subaddress subaddress `uc  1 p 1 2 ]
 [v i2c_write@data data `uc  1 p 1 3 ]
 [v i2c_write@address address `uc  1 a 1 4 ]
-"99
+"131
 } 0
-"138
+"95
+[v _gyro_cal gyro_cal `(v  1 e 1 0 ]
+{
+"100
+[v gyro_cal@x x `i  1 a 2 22 ]
+"117
+} 0
+"204
+[v _reset_timer_loop reset_timer_loop `(v  1 e 1 0 ]
+{
+"208
+} 0
+"78
+[v _read_sensor read_sensor `(v  1 e 1 0 ]
+{
+"93
+} 0
+"133
+[v _i2c_read i2c_read `(i  1 e 2 0 ]
+{
+[v i2c_read@address address `uc  1 a 1 wreg ]
+"134
+[v i2c_read@high high `i  1 a 2 14 ]
+[v i2c_read@low low `i  1 a 2 12 ]
+"133
+[v i2c_read@address address `uc  1 a 1 wreg ]
+[v i2c_read@subaddress subaddress `uc  1 p 1 7 ]
+"135
+[v i2c_read@address address `uc  1 a 1 16 ]
+"154
+} 0
+"170
 [v _nack nack `(i  1 e 2 0 ]
 {
-"144
+"176
 } 0
-"167
+"199
 [v _i2c_stop i2c_stop `(v  1 e 1 0 ]
 {
-"171
+"203
 } 0
-"158
+"190
 [v _i2c_write_byte i2c_write_byte `(v  1 e 1 0 ]
 {
 [v i2c_write_byte@address address `uc  1 a 1 wreg ]
 [v i2c_write_byte@address address `uc  1 a 1 wreg ]
 [v i2c_write_byte@address address `uc  1 a 1 0 ]
-"165
-} 0
-"146
-[v _i2c_start i2c_start `(v  1 e 1 0 ]
-{
-"150
+"197
 } 0
 "178
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+{
+"182
+} 0
+"184
+[v _i2c_restart i2c_restart `(v  1 e 1 0 ]
+{
+"188
+} 0
+"156
+[v _i2c_read_byte i2c_read_byte `(i  1 e 2 0 ]
+{
+[v i2c_read_byte@ack ack `uc  1 a 1 wreg ]
+"157
+[v i2c_read_byte@temp temp `i  1 a 2 5 ]
+"156
+[v i2c_read_byte@ack ack `uc  1 a 1 wreg ]
+"158
+[v i2c_read_byte@ack ack `uc  1 a 1 4 ]
+"168
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 11 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 10 ]
+[v ___aldiv@counter counter `uc  1 a 1 9 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 0 ]
+[v ___aldiv@dividend dividend `l  1 p 4 4 ]
+"41
+} 0
+"210 C:\Users\mplab\MPLABXProjects\dron.X\config.c
 [v _calculate_pid calculate_pid `(v  1 e 1 0 ]
 {
-"180
+"212
 } 0
-"186
+"218
 [v _battery_compensation battery_compensation `(v  1 e 1 0 ]
 {
-"201
+"233
 } 0
-"182
+"214
 [v _balance_drone balance_drone `(v  1 e 1 0 ]
 {
-"184
+"216
 } 0
-"203
+"235
 [v _remote remote `II(v  1 e 1 0 ]
 {
-"307
+"339
 } 0

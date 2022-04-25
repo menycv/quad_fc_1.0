@@ -16956,18 +16956,20 @@ extern __bank0 __bit __timeout;
 
 extern signed int accx, accy, accz, gyrox, gyroy, gyroz, magx, magy, magz;
 extern unsigned TMR2H, count, TMR0H, tmrLoop, ch1, ch2, ch3, ch4, voltage, esc1, esc2, esc3, esc4;
-
+extern unsigned char start;
 
 struct previous{
     unsigned p1 :1;
     unsigned p2 :1;
     unsigned p3 :1;
     unsigned p4 :1;
+    unsigned cal :1;
 };
 
 extern struct previous p;
 
 void gyro_config(void);
+void gyro_cal(void);
 void i2c_start(void);
 void i2c_write_byte(unsigned char);
 void i2c_stop(void);
@@ -17008,12 +17010,14 @@ unsigned char start;
 void main(void) {
 
     pic_init();
-    gyro_config();
 
 
     start = 0;
     LATCbits.LATC7 = 0;
     ch3 = 1000;
+
+    gyro_config();
+
 
     while(1){
 
